@@ -1,0 +1,131 @@
+@import 'variaveis';
+
+.container-cursos{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .jcarousel-wrapper{
+        .jcarousel{
+            text-align: center;
+            h5{
+                margin-bottom: 20px;
+            }   
+            .card-img{
+                height: 75px;
+                background-position: center;
+                border-radius: 50%;
+                width: 75px;
+                margin: auto;
+            }
+            .card{
+                border-radius: initial;
+                border:1px solid $var-color-green;
+            }
+            ul {
+                width: 10000em;
+                position: relative;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                width: 275px;
+                float: left;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            li p {
+                flex: 1 0 auto;
+              }
+            li a{
+                color: #212529;
+                text-decoration: none;
+            }
+            li a .card:hover{
+                border: 1px solid #abdbc7;
+                -webkit-box-shadow: 0px 0px 12px -1px rgba(171,219,199,1);
+                -moz-box-shadow: 0px 0px 12px -1px rgba(171,219,199,1);
+                box-shadow: 0px 0px 12px -1px rgba(171,219,199,1);
+            }
+        }
+    }
+}
+
+.jcarousel-wrapper {
+    position: relative;
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #c3281e;
+    color: #c3281e;
+    text-decoration: none;
+    font: 24px/35px Arial, sans-serif;
+    bottom: -60px;
+}
+
+a.jcarousel-control-next:hover,
+a.jcarousel-control-prev:hover {
+    background: #c3281e;
+    color: white;
+    text-decoration: none;
+}
+
+.jcarousel-control-prev {
+    right: 100px;
+}
+
+.jcarousel-control-next {
+    right: 40px;
+}
+
+/** Carousel Pagination **/
+.bg-white .jcarousel-pagination a{
+    border: 2px solid white;
+}
+.bg-soft-blue .jcarousel-pagination a{
+    border: 2px solid $var-color-soft-blue;
+}
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+    a {
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 50%;
+        font-size: 11px;
+        height: 13px;
+        width: 13px;
+        line-height: 10px;
+        background: #c3281e;
+        color: #c3281e;
+        text-indent: -9999px;
+        margin-right: 7px;
+    }
+    a.active {
+        background: #4E443C;
+        color: #fff;
+        opacity: 1;
+        background: #c3281e;
+        border: 2px solid #c3281e;
+    }
+}

@@ -1,0 +1,196 @@
+@import 'variaveis';
+
+%a{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+html{
+    font-size: 14px;
+    color: #707070;
+}
+
+// Background
+.bg-gray{
+    background: $var-color-gray;
+}
+
+.bg-white{
+    background: white;
+}
+
+.bg-soft-blue{
+    background: $var-color-soft-blue;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    &.color-white{
+        color: #fff;
+    }
+    &.color-green{
+        color: $var-color-green;
+    }
+}
+
+.no-gutters{
+    padding: 0px;
+}
+
+// buttons
+.btn-liga{
+    text-transform: uppercase;
+    border-radius: 0px;
+    background: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    &.btn-type-1{
+        border: 1px solid $var-color-red;
+        color: $var-color-red;
+    }
+    &.btn-type-2{
+        border: 1px solid #fff;
+        color: #fff;
+    }
+} 
+
+a.btn-type-1:hover{
+    background: $var-color-red;
+    color: #fff;
+}
+
+// Barra contato
+.barra-contato{
+    height: 40px;
+    background: $var-color-red;
+}
+
+// Botao pesquisar
+header{
+    position: relative;
+    .barra-pesquisar{
+        z-index: 999;
+        position: absolute;
+        bottom: 50px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        button{
+            background: $var-color-red;
+            border: none;
+            width: 45px;
+            height: 45px;
+            cursor: pointer;
+            img{
+                width: 25px;
+            }
+        }
+        input[type=text]{
+            height: 43px;
+            padding: 10px;
+            border: none;
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+// formulario contato/sugestao
+.parallax{
+    background-image:url("../../img/wallpaper-paralax.jpg");
+    padding: 100px 0px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .formulario-contato-index input[type=text]{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 10px;
+    }
+    .formulario-contato-index textarea{
+        width: 100%;
+        padding: 10px;
+        height: 100px;
+        margin-bottom: 10px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+// barra menu
+.barra-menu{
+    height: $var-height;
+    background: #fff;
+    .bt-login{
+        background: green;
+        color: white;
+        line-height: $var-height;
+        a{
+            color: white;
+            @extend %a;
+        }
+    }
+    .row{
+        height: 100%;
+    }
+    .menu-horizontal{
+        border-left: 1px solid #d2d2d2; 
+        height: 80px;
+    }
+    .menu-horizontal a{
+        line-height: $var-height;
+        color: #707070;
+        @extend %a;
+    }
+    .menu-horizontal.no-gutters a:hover{
+        border-bottom: 4px solid $var-color-red;
+    }
+}
+
+.icons-redes-sociais img{
+    width: 18px;
+    margin: 0px 4px;
+}
+
+.container-rodape{
+    background: $var-color-green;
+    color: #fff;
+    .info-endereco{
+        border-left: 1px solid #fff;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    ul{
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+    }
+    ul li a{
+        color: #fff;
+    }
+    .ir-para-topo{
+        width: 50px;
+        height: 50px;
+        background: $var-color-red;
+        position: absolute;
+        right: 0px;
+        margin-top: -42px;
+        text-align: center;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        img{
+            width: 25px;
+            margin-top: 10px;
+        }
+    }
+}
