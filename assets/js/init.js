@@ -44,24 +44,24 @@ new Vue({
     }    
 })
 
-// new Vue({
-//     el: '#showcase_landing_page',
-//         data: {
-//             imagensShowcase: [],
-//             loading: true,
-//         },
-//         computed: {
-//             quantidadeSliders: function () {
-//                 return this.imagensShowcase.length;
-//             }
-//         },
-//         mounted () {
-//             axios
-//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-//             .then(response => (this.imagensShowcase = response.data ))
-//             .finally(() => this.loading = true)
-//         }  
-// })
+new Vue({
+    el: '#showcase_landing_page',
+        data: {
+            imagensShowcase: [],
+            loading: true,
+        },
+        computed: {
+            quantidadeSliders: function () {
+                return this.imagensShowcase.length;
+            }
+        },
+        mounted () {
+            axios
+            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+            .then(response => (this.imagensShowcase = response.data ))
+            .finally(() => this.loading = true)
+        }  
+})
 
 new Vue({
     el: '#lista-cursos-semi-presenciais',

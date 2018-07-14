@@ -60,9 +60,7 @@
          </div>
       </div>
 
-
-
-      <!-- <header id="showcase_landing_page">
+      <header id="showcase_landing_page">
 
         <div class="barra-pesquisar">
           <form>
@@ -89,7 +87,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </header> -->
+      </header>
       
           <!-- Conteudo -->
           <div id="lista-cursos-presenciais" class="container-fluid bg-white">
