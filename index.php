@@ -62,13 +62,13 @@
 
 
 
-      <header id="showcase_landing_page">
+      <!-- <header id="showcase_landing_page">
 
         <div class="barra-pesquisar">
-          <!-- <form>
+          <form>
             <input type="text">
             <button><img src="assets/img/icone_marcacao/search.svg"></button>
-          </form> -->
+          </form>
         </div>
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -89,7 +89,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </header>
+      </header> -->
       
           <!-- Conteudo -->
           <div id="lista-cursos-presenciais" class="container-fluid bg-white">
@@ -109,7 +109,7 @@
                             <li v-for="item in listCursosPresenciais" class="col-md-4 pt-2 pb-2">
                               <a href="#">
                                 <div class="card">
-                                  <div class="card-img mb-2 mt-4" style="background-image: url(http://eadh.liga.org.br/webservice/pluginfile.php/21/course/overviewfiles/cover_course.jpg?token=abd25152ce4f60bb1aeddb480c034867)"></div>
+                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
                                   <div class="card-body">
                                     <h5>{{ item.fullname }}</h5>
                                     <p class="card-text">{{ item.summary | tratar_string }}</p>
@@ -148,7 +148,7 @@
                             <li v-for="semiPresencial in listCursosSemiPresenciais"  class="col-md-4 pt-2 pb-2">
                               <a href="#">
                                 <div class="card">
-                                  <div class="card-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
                                   </div>
                                   <div class="card-body">
                                     <h5>{{ semiPresencial.fullname }}</h5>
@@ -205,7 +205,7 @@
                           <li v-for="ead in listCursosEAD"  class="col-md-4 pt-2 pb-2">
                             <a href="#">
                               <div class="card">
-                                <div class="card-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + ead.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + ead.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
                                 </div>
                                 <div class="card-body">
                                   <h5>{{ ead.fullname }}</h5>
