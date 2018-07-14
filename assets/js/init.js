@@ -25,7 +25,7 @@ new Vue({
     },
     mounted () {
       axios
-        .get('http://eadh.liga.org.br/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=2&moodlewsrestformat=json')
+        .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=2&moodlewsrestformat=json')
         .then(response => (this.listCursosPresenciais = response.data.courses))
         .finally(() => this.loading = true)
     }    
@@ -44,7 +44,7 @@ new Vue({
         },
         mounted () {
             axios
-            .get('http://localhost/moodle/blocks/showcase/display_slideshow.php')
+            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
             .then(response => (this.imagensShowcase = response.data ))
             .finally(() => this.loading = true)
         }  
@@ -77,7 +77,7 @@ new Vue({
         },
         mounted () {
           axios
-            .get('http://eadh.liga.org.br/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=3&moodlewsrestformat=json')
+            .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=3&moodlewsrestformat=json')
             .then(response => (this.listCursosSemiPresenciais = response.data.courses))
             .finally(() => this.loading = true)
         }    
@@ -110,7 +110,7 @@ new Vue({
         },
         mounted () {
           axios
-            .get('http://eadh.liga.org.br/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=4&moodlewsrestformat=json')
+            .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=4&moodlewsrestformat=json')
             .then(response => (this.listCursosEAD = response.data.courses))
             .finally(() => this.loading = true)
         }    
