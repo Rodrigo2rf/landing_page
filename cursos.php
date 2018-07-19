@@ -16,9 +16,194 @@
         <button><img src="assets/img/icone_marcacao/search.svg"></button>
         </form>
     </div>
+
+    
+    <div class="row justify-content-center menu-de-cursos">
+        <a href="#" class="link-menu-de-cursos col-md-2">
+            Cursos<br>Presenciais
+        </a>
+        <a href="#" class="link-menu-de-cursos col-md-2">
+            Cursos<br>Semipresenciais
+        </a>
+        <a href="#" class="link-menu-de-cursos col-md-2"> 
+            Cursos<br>online / EAD
+        </a>
+    </div>
+
 </section>
 
-<section class="container">sdf
+<section class="container container-cursos">
+            <div class="row">    
+    <!-- <ul class="lista-cursos">
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+
+        <li class="col-md-3 pt-2 pb-4">
+            <a href="#">
+            <div class="card">
+                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
+                </div>
+                <div class="card-body">
+                <h5>semiPresencial.fullname</h5>
+                <p class="card-text">
+                semiPresencial.summary | tratar_string</p>
+                </div>
+            </div>
+            </a>
+        </li>
+    </ul> -->
+</div>
 </section>
 
 <?php
