@@ -6,7 +6,7 @@
 ?>
 
       <!-- SLIDER -->
-      <!-- <header id="showcase_landing_page">
+      <header id="showcase_landing_page">
         <div class="barra-pesquisar">
           <form>
             <input type="text">
@@ -30,7 +30,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </header> -->
+      </header>
       
       <!-- PRESENCIAL -->
       <div id="lista-cursos-presenciais" class="container-fluid bg-white">
@@ -73,7 +73,6 @@
         </div>
       </div>
       <!-- -->
-
 
       <!-- SEMI-PRESENCIAL -->
       <div id="lista-cursos-semi-presenciais" class="container-fluid bg-soft-blue">
@@ -188,14 +187,57 @@
       <!-- -->
 
       <!-- Depoimento alunos -->
-      <div class="container pt-3 pb-3">
-        <div class="row">
-          <div class="col">
-            <h3 class="color-green text-center">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
-          </div>
-        </div>
+      <div id="comentarios-alunos" class="container-fluid">
+         <div class="container container-cursos">
+            <div class="col">
+              <h3 class="color-green text-center">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
+            </div>
+            <div class="row">
+             <div class="col-md-12">
+                  <!-- Carousel -->
+                  <div class="wrapper">
+                     <div class="jcarousel-wrapper">
+                        <div class="jcarousel">
+
+                          <ul class="lista-cursos">
+                            <li v-for="msg in msnEnviadas"  class="col-md-4 pt-2 pb-2">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <p class="card-text">{{ msg.message }}</p>
+                                    <span>{{ msg.timecreated }} - {{ msg.fullname }}</span>
+                                  </div>
+                                </div>
+                            </li>
+                          </ul>
+
+                        </div>
+                        <div v-if="quantidadeRegistros > 3">
+                          <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                          <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                          <p class="jcarousel-pagination"></p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- -->
+               </div>
+              
+            </div>
+         </div>
       </div>
       <!-- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!-- Formulario contato sugestao -->
       <div class="container-fluid parallax">

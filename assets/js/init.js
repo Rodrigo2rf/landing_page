@@ -58,24 +58,24 @@ var vm =  new Vue({
 });
  
 
-// new Vue({
-//     el: '#showcase_landing_page',
-//         data: {
-//             imagensShowcase: [],
-//             loading: true,
-//         },
-//         computed: {
-//             quantidadeSliders: function () {
-//                 return this.imagensShowcase.length;
-//             }
-//         },
-//         mounted () {
-//             axios
-//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-//             .then(response => (this.imagensShowcase = response.data ))
-//             .finally(() => this.loading = true)
-//         }  
-// })
+new Vue({
+    el: '#showcase_landing_page',
+        data: {
+            imagensShowcase: [],
+            loading: true,
+        },
+        computed: {
+            quantidadeSliders: function () {
+                return this.imagensShowcase.length;
+            }
+        },
+        mounted () {
+            axios
+            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+            .then(response => (this.imagensShowcase = response.data ))
+            .finally(() => this.loading = true)
+        }  
+})
 
 new Vue({
     el: '#lista-cursos-semi-presenciais',
@@ -151,3 +151,24 @@ new Vue({
         console.log(q)
     },
 });
+
+new Vue({
+    el: '#comentarios-alunos',
+    data: {
+        msnEnviadas: [],
+        loading: true,
+    },
+    computed: {
+        quantidadeRegistros: function () {
+            return 2;
+        }
+    },
+    mounted () {
+      axios
+        .get('http://localhost/m35/blocks/user_opinion/display_messages.php')
+        .then(response => (
+            this.msnEnviadas = response.data
+        ))
+        .finally(() => this.loading = true)
+    }    
+})
