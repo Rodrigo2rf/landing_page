@@ -14,6 +14,7 @@
       <link href="assets/css/dist/full-slider.css" rel="stylesheet">      
       <script src="https://cdn.jsdelivr.net/npm/vue"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+      <script src="https://unpkg.com/vue-router"></script>
 
       <link rel="icon" href="assets/img/favicon.png">
       <title>Moodle Liga</title>

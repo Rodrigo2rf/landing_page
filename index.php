@@ -6,7 +6,7 @@
 ?>
 
       <!-- SLIDER -->
-      <header id="showcase_landing_page">
+      <!-- <header id="showcase_landing_page">
         <div class="barra-pesquisar">
           <form>
             <input type="text">
@@ -30,7 +30,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </header>
+      </header> -->
       
       <!-- PRESENCIAL -->
       <div id="lista-cursos-presenciais" class="container-fluid bg-white">
