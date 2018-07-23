@@ -15,11 +15,11 @@ new Vue({
             if( this.listCursosPresenciais.length == 0 ){
                 return coluns = { conteudo: 12, curso: null }
             } else if( this.listCursosPresenciais.length == 1 ){
-                return coluns = { conteudo: 9, cursos: 3 }
+                return coluns = { conteudo: 9, cursos: 3, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length == 2 ){
-                return coluns = { conteudo: 6, cursos: 6 }
+                return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length >= 3 ){
-                return coluns = { conteudo: 3, cursos: 9 }
+                return coluns = { conteudo: 3, cursos: 9, qtd: this.listCursosPresenciais.length }
             }
         }
     },
@@ -160,12 +160,12 @@ new Vue({
     },
     computed: {
         quantidadeRegistros: function () {
-            return 2;
+            return this.msnEnviadas.length;
         }
     },
     mounted () {
       axios
-        .get('http://localhost/m35/blocks/user_opinion/display_messages.php')
+        .get('http://eadh.liga.org.br/moodle/blocks/user_opinion/display_messages.php')
         .then(response => (
             this.msnEnviadas = response.data
         ))
