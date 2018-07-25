@@ -48,16 +48,46 @@ var router = new VueRouter({
     mode: 'history',
     routes: []
 });
-var vm =  new Vue({
+new Vue({
     router,
-    el: '#app',
-    mounted: function() {
-        q = this.$route.query.q
-        console.log(q)
+    el: '#show_courses',
+    data: {
+        result: [],
+        loading: true,
+    },
+    filters: {
+        tratar_string (text) {
+            var count = 150;
+            return text.slice(0, count) + (text.length > count ? "..." : "");
+        }
+    },
+    watch: {
+        result: function () {
+            for(var i=0; i < this.result.length; i++){
+                if( this.result[i].overviewfiles[0] == null ){ 
+                    this.result[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+                }else{
+                    this.result[i].img_capa_curso = this.result[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+                }
+            }
+        }
+    },
+    computed:{
+        showList: function(){
+            return this.result.length > 0;
+        }
+    },
+    mounted () {
+        q = this.$route.query.q,
+        axios
+        .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+q+'&moodlewsrestformat=json')
+        .then(response => (
+            this.result = response.data.courses
+        ))
+        .finally(() => this.loading = true)
     },
 });
  
-
 new Vue({
     el: '#showcase_landing_page',
         data: {
@@ -165,7 +195,7 @@ new Vue({
     },
     mounted () {
       axios
-        .get('http://eadh.liga.org.br/moodle/blocks/user_opinion/display_messages.php')
+        .get('http://localhost/m35/blocks/user_opinion/display_messages.php')
         .then(response => (
             this.msnEnviadas = response.data
         ))

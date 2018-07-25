@@ -5,7 +5,7 @@
 
 ?>
 
-      <!-- SLIDER -->
+      <!-- SLIDER --> 
       <header id="showcase_landing_page">
         <div class="barra-pesquisar">
           <form>
@@ -31,6 +31,7 @@
           </a>
         </div>
       </header>
+      
       
       <!-- PRESENCIAL -->
       <div id="lista-cursos-presenciais" class="container-fluid bg-white">
@@ -60,7 +61,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div v-if="quantidadeRegistros > 3">
+                    <div v-if="quantidadeRegistros.qtd > 3">
                       <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                       <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                       <p class="jcarousel-pagination"></p>
@@ -101,7 +102,7 @@
                           </ul>
 
                         </div>
-                        <div v-if="quantidadeRegistros > 3">
+                        <div v-if="quantidadeRegistros.qtd > 3">
                           <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                           <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                           <p class="jcarousel-pagination"></p>
@@ -156,7 +157,7 @@
                         </ul>
                       </div>
                       <div>
-                        <div v-if="quantidadeRegistros > 3">
+                        <div v-if="quantidadeRegistros.qtd > 3">
                           <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                           <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                           <p class="jcarousel-pagination"></p>
