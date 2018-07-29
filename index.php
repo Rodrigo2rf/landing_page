@@ -40,7 +40,7 @@
           <div :class="['col-md-'+quantidadeRegistros.conteudo]">
               <h4 class="color-green">Cursos Presenciais</h4>
               <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit endrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de achacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
-              <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=1">Acessar</a>
+              <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=2">Acessar</a>
             </div>
             <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
               <!-- Carousel -->
@@ -117,7 +117,7 @@
                      amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im
                      ampola pa arma uma pindureta.
                   </p>
-                  <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=2">Acessar</a>
+                  <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=3">Acessar</a>
                </div>
             </div>
          </div>
@@ -134,7 +134,7 @@
                      amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im
                      ampola pa arma uma pindureta.
                   </p>
-                  <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=3">Acessar</a>
+                  <a class="btn btn-liga btn-type-1 float-md-right" href="cursos.php?q=1">Acessar</a>
                </div>
                 <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">                  <!-- Carousel -->
                   <div class="wrapper">

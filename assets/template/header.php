@@ -11,8 +11,17 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
       
       <!-- Custom styles for this template -->
+    
       <link href="assets/css/dist/full-slider.css" rel="stylesheet">      
-      <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <!-- <link href="https://unpkg.com/vuetify@1.1.8/dist/vuetify.min.css" rel="stylesheet"> 
+    
+      <script src="https://unpkg.com/vuetify@1.1.8/dist/vuetify.min.js"></script> -->
+    
+      <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    
+
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
       <script src="https://unpkg.com/vue-router"></script>
 
