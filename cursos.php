@@ -46,8 +46,7 @@
                             <div class="card-img background-img mb-2 mt-4"></div>
                             <div class="card-body">
                                 <h5>{{ curso.fullname }}</h5>
-                            <p class="card-text">
-                                {{ curso.summary | tratar_string }}</p>
+                            <p class="card-text" v-html="$options.filters.tratar_string(curso.summary)"></p>
                             </div>
                         </div>
                         </a>
