@@ -15,17 +15,20 @@
     <div class="barra-pesquisar">
         <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
     </div>
+
+      
     <div class="row justify-content-center menu-de-cursos">
-        <a href="#" class="link-menu-de-cursos col-md-2">
+         <a href="#" class="link-menu-de-cursos col-md-2 text-center">
             Cursos<br>Presenciais
         </a>
-        <a href="#" class="link-menu-de-cursos col-md-2">
+        <a href="#" class="link-menu-de-cursos col-md-2 text-center">
             Cursos<br>Semipresenciais
         </a>
-        <a href="#" class="link-menu-de-cursos col-md-2"> 
+        <a href="#" class="link-menu-de-cursos col-md-2 text-center"> 
             Cursos<br>online / EAD
-        </a>
+        </a> 
     </div>
+
 </section>
 
 <section class="container container-cursos">
@@ -36,14 +39,15 @@
         <div v-if="showList"> 
             <div class="row">
                 <ul class="lista-cursos">
-                    <li v-for="(r, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-md-3 pt-2 pb-4">
-                        <a href="#">
+                    <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-md-3 pt-2 pb-4">
+                        
+                        <a :href="'/landing_page/curso.php?q=' + curso.id">
                         <div class="card">
                             <div class="card-img background-img mb-2 mt-4"></div>
                             <div class="card-body">
-                                <h5>{{ r.fullname }}</h5>
+                                <h5>{{ curso.fullname }}</h5>
                             <p class="card-text">
-                                {{ r.summary | tratar_string }}</p>
+                                {{ curso.summary | tratar_string }}</p>
                             </div>
                         </div>
                         </a>
@@ -61,6 +65,8 @@
 </section>
 
 </div>
+
+ <script src="assets/js/init_cursos.js"></script>
 
 <?php
 

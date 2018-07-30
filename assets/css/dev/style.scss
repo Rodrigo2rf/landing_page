@@ -233,12 +233,11 @@ section{
     background-position: center center; 
     background-color: $var-color-green;
     position: relative;
+    min-height: 370px;
     .menu-de-cursos{
-        position: absolute;
-        text-align: center;
-        left: 0;
-        right: 0;
-        bottom: -40px;
+        position: relative;
+        bottom: -125px;
+
         a.link-menu-de-cursos{
             background: white;
             padding: 25px 0px;
