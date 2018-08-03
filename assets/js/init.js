@@ -240,18 +240,37 @@ new Vue({
             }else{
                 date = new Date(val + '-' + 1);
             }
-
-            var timestart = new Date(date.getFullYear(), date.getMonth(), 1);
-            var timefinish = new Date(date.getFullYear(), date.getMonth() + 1);  
-    
+            
+            var timestart 	= new Date(date.getFullYear(), date.getMonth(), 1);
+            var timefinish 	= new Date(date.getFullYear(), date.getMonth() + 1);  
+           
             start_month = timestart.getMonth() + 1;
-            start_end = start_month + 1;
+            if( start_month == 12 ){
+            	start_end = 1;
+            }else{
+            	start_end = start_month + 1;
+            }
             
             new_timestart = timestart.getFullYear()+'-'+start_month+'-'+timestart.getDate();
-            new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate();   
+            new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate(); 
+            
+            new_timestart  = new_timestart  + ' 00:00:00';
+        	new_timefinish = new_timefinish + ' 00:00:00';
         
             up_timestart = new Date(new_timestart).getTime() / 1000;
             up_timefinish = new Date(new_timefinish).getTime() / 1000;
+
+//             var timestart = new Date(date.getFullYear(), date.getMonth(), 1);
+//             var timefinish = new Date(date.getFullYear(), date.getMonth() + 1);  
+    
+//             start_month = timestart.getMonth() + 1;
+//             start_end = start_month + 1;
+            
+//             new_timestart = timestart.getFullYear()+'-'+start_month+'-'+timestart.getDate();
+//             new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate();   
+        
+//             up_timestart = new Date(new_timestart).getTime() / 1000;
+//             up_timefinish = new Date(new_timefinish).getTime() / 1000;
     
             this.getEvents(up_timestart, up_timefinish);
         }
