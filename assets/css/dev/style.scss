@@ -253,3 +253,26 @@ section{
         }
     }
 }
+
+#calendario{
+    .eventos-calendario li{
+        list-style-type: none;
+        min-width: 100%;
+        background: white;
+        margin-bottom: 10px;
+        border: 1px solid $var-color-green;
+        display: inherit;
+    }
+    li .titulo{
+        font-weight: bold;
+    }
+}
+
+#comentarios-alunos{
+    ul.depoimentos p{
+        color:#707070;
+    }
+    ul.depoimentos span{
+        float: right;
+    }
+}

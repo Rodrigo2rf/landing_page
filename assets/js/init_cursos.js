@@ -58,6 +58,11 @@ var app = new Vue({
         },
         totalPage: function(){
             return Math.ceil(this.filteredRows.length / this.countOfPage);
+        },
+        limpar_consulta: function(){
+            if( this.$route.query.c != null ){
+                return limpar_consulta = 0;
+            }
         }
     },
     methods: {
@@ -72,11 +77,11 @@ var app = new Vue({
         q = this.$route.query.q;
         c = this.$route.query.c;
         if ( c != null ){
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=fullname&value='+c+'&moodlewsrestformat=json';
+            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=shortname&value='+c+'&moodlewsrestformat=json';
         }else if( q != null){
             url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+q+'&moodlewsrestformat=json';
         }else{
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=fullname&moodlewsrestformat=json';           
+            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';           
         }
         axios
         .get(url)

@@ -6,7 +6,6 @@
 ?>
 
 <div id="curso">
-
     <section id="info-cursos" class="container-fluid"> 
         <div v-if="exite"> 
     </section>
@@ -27,10 +26,9 @@
             </div>
         </div>
     </section>
-
 </div>
 
-    <script src="assets/js/init_curso.js"></script>
+<script src="assets/js/init_curso.js"></script>
 
 <?php
 

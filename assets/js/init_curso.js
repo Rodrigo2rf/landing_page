@@ -25,13 +25,11 @@ var app = new Vue({
     },
     watch: {
         curso: function () {
-            // for(var i=0; i < this.curso.length; i++){
-                if( this.curso.overviewfiles[0] == null ){ 
-                    this.curso.img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                }else{
-                    this.curso.img_capa_curso = this.curso.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                }
-            // }
+            if( this.curso.overviewfiles[0] == null ){ 
+                this.curso.img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+            }else{
+                this.curso.img_capa_curso = this.curso.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+            }
         }
     },
     mounted () {
@@ -49,6 +47,3 @@ var app = new Vue({
             .finally(() => this.loading = true)
     }    
 })
-
-
-// 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json'

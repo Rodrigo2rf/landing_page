@@ -4898,7 +4898,10 @@
     min-width: 0;
     position: relative;
     text-decoration: none;
-    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    border: 1px solid #abdbc7; 
+    -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; 
+    -moz-box-shadow: 0px 0px 12px -1px #abdbc7; 
+    box-shadow: 0px 0px 12px -1px #abdbc7;
   }
   .v-card > *:first-child:not(.v-btn):not(.v-chip) {
     border-top-left-radius: inherit;
@@ -10524,5 +10527,10 @@
     }
   }
   
-  
+  .v-picker__title.primary{
+    display: none;
+  }
+  .v-date-picker-header{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+  }
   /*# sourceMappingURL=vuetify.css.map*/

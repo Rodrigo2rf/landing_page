@@ -188,15 +188,15 @@
 
       <v-flex xs12 sm6 class="my-2 px-1">
         <div v-if="quantidadeRegistros > 0">
-          <ul class="ma-3">
+          <ul class="ma-3 eventos-calendario">
             <li v-for="note in allNotes" class="col-md-4 pt-2 pb-2">
-              <span v-html="note.name"></span>
+              <span v-html="note.name" class="titulo"></span>
               <span v-html="note.description"></span>
             </li>
           </ul>
         </div>
         <div v-if="quantidadeRegistros <= 0">
-              <p class="mt-2">Nenhum evento cadastrado!</p>
+              <p class="mt-2 text-danger"><b>Nenhum evento encontrado!</b></p>
         </div>
       </v-flex>
     </v-layout>
@@ -221,11 +221,11 @@
                      <div class="jcarousel-wrapper">
                         <div class="jcarousel">
 
-                          <ul class="lista-cursos">
+                          <ul class="lista-cursos depoimentos">
                             <li v-for="msg in msnEnviadas"  class="col-md-4 pt-2 pb-2">
                                 <div class="card">
                                   <div class="card-body">
-                                    <p class="card-text">"{{ msg.message }}"</p>
+                                    <p class="card-text text-left">"{{ msg.message }}"</p>
                                     <span>{{ msg.timecreated | formatar_data }} - {{ msg.fullname }}</span>
                                   </div>
                                 </div>

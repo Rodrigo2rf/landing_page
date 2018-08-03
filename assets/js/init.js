@@ -4,24 +4,24 @@
  * SESSAO: SLIDESHOW
  * 
  */
-// new Vue({
-//     el: '#showcase_landing_page',
-//         data: {
-//             imagensShowcase: [],
-//             loading: true,
-//         },
-//         computed: {
-//             quantidadeSliders: function () {
-//                 return this.imagensShowcase.length;
-//             }
-//         },
-//         mounted () {
-//             axios
-//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-//             .then(response => (this.imagensShowcase = response.data ))
-//             .finally(() => this.loading = true)
-//         }  
-// })
+new Vue({
+    el: '#showcase_landing_page',
+        data: {
+            imagensShowcase: [],
+            loading: true,
+        },
+        computed: {
+            quantidadeSliders: function () {
+                return this.imagensShowcase.length;
+            }
+        },
+        mounted () {
+            axios
+            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+            .then(response => (this.imagensShowcase = response.data ))
+            .finally(() => this.loading = true)
+        }  
+})
 
 
 
@@ -176,20 +176,12 @@ new Vue({
         formatar_data: function(value) {
 
             var valor_formatado = new Date(value * 1000);
- 
-            // Months array
             var months_arr = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-
-            // Year
             var year = valor_formatado.getFullYear();
-
-            // Month
             var month = months_arr[valor_formatado.getMonth()];
-
-            // Day
             var day = valor_formatado.getDate();
 
-            return day+'-'+month+'-'+year;
+            return day+' '+month+' '+year;
         }
     },
     computed: {
@@ -197,36 +189,9 @@ new Vue({
             return this.msnEnviadas.length;
         }
     },
-    // watch: {
-    // msnEnviadas: function () {
-    //     alert("sdfg");
-    //     for(var i=0; i < this.msnEnviadas.length; i++){
-    //         alert("sdfdgsgfgdg");
-    //         console.log(this.msnEnviadas[i]);
-    //         var valor_formatado = new Date(msnEnviadas[i].timecreated * 1000);
-    //                     // Months array
-    //         var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-    //         // Year
-    //         var year = valor_formatado.getFullYear();
-
-    //         // Month
-    //         var month = months_arr[valor_formatado.getMonth()];
-
-    //         // Day
-    //         var day = valor_formatado.getDate();
-
-    //         msnEnviadas[i].timecreated = day+'-'+month+'-'+year;
-
-
-    //         console.log(this.msnEnviadas[i]);
-    //     }
-
-    //     }
-    // },
     mounted () {
       axios
-        .get('http://localhost/m35/blocks/user_opinion/display_messages.php')
+        .get('http://eadh.liga.org.br/moodle/blocks/user_opinion/display_messages.php')
         .then(response => (
             this.msnEnviadas = response.data
         ))
@@ -235,6 +200,12 @@ new Vue({
 })
 
 
+/**
+ * 
+ * PAGINA: INDEX
+ * SESSAO: RENDERIZAR O CALENDARIO
+ * 
+ */
 new Vue({
     el: '#calendario',
     data: {
@@ -258,7 +229,7 @@ new Vue({
      methods:{
         getEvents: function(up_timestart, up_timefinish){
             return axios
-                .get('http://localhost/moodle/webservice/rest/server.php?wstoken=f3138b500b2824636c345bab8fa6fed7&wsfunction=core_calendar_get_calendar_events&options[timestart]='+up_timestart+'&options[timeend]='+up_timefinish+'&moodlewsrestformat=json')
+                .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_calendar_get_calendar_events&options[timestart]='+up_timestart+'&options[timeend]='+up_timefinish+'&moodlewsrestformat=json')
                 .then(response => ( this.allNotes = response.data.events  ))
                 .finally(() => this.loading = true)
         },
@@ -287,24 +258,3 @@ new Vue({
     }
 
 });
-
-// filters: {
-//     formatar_data: function(value) {
-//         alert("adsf");
-//         // var valor_formatado = new Date(text * 1000);
-
-//         // // Months array
-//         // var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
-//         // // Year
-//         // var year = valor_formatado.getFullYear();
-
-//         // // Month
-//         // var month = months_arr[valor_formatado.getMonth()];
-
-//         // // Day
-//         // var day = valor_formatado.getDate();
-
-//         return 'dfsdfsfs';
-//     }
-// },
