@@ -8,8 +8,8 @@
       <!-- SLIDER --> 
       <header id="showcase_landing_page">
         <div class="barra-pesquisar">
-          <form>
-            <input type="text">
+          <form action="cursos.php" method="get">
+            <input name="c" type="text">
             <button><img src="assets/img/icone_marcacao/search.svg"></button>
           </form>
         </div>
@@ -32,7 +32,6 @@
         </div>
       </header>
       
-      
       <!-- PRESENCIAL -->
       <div id="lista-cursos-presenciais" class="container-fluid bg-white">
         <div class="container container-cursos">
@@ -54,7 +53,7 @@
                               <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
                               <div class="card-body">
                                 <h5>{{ item.fullname }}</h5>
-                                <p class="card-text" v-html="$options.filters.tratar_string(item.summary)">></p>
+                                <p class="card-text" v-html="$options.filters.tratar_string(item.summary)"></p>
                               </div>
                             </div>
                           </a>
@@ -169,13 +168,41 @@
       <!-- calendario -->
       <div class="container-fluid bg-soft-blue pt-5 pb-5">
           <div class="container">
-            <div id="calendar"></div>
-            <div class="row">
-              <div class="col-md-5">
-                <h4 class="color-green">Agenda</h4>
-                <p class="pt-3 pb-3">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
-              </div>
-              <div class="col-md-7"></div>
+
+              <div class="row">
+
+<div id="calendario">
+  <v-app id="inspire">
+    <v-layout row wrap>
+            
+
+      <v-flex xs12 sm6 class="my-2 px-1">
+
+              <h3 class="color-green text-left">Agenda</h3>
+
+              <p class="text-left">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí umpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
+
+        <v-date-picker ref="picker" v-model="date" :picker-date.sync="pickerDate" full-width></v-date-picker>
+      </v-flex>
+
+
+      <v-flex xs12 sm6 class="my-2 px-1">
+        <div v-if="quantidadeRegistros > 0">
+          <ul class="ma-3">
+            <li v-for="note in allNotes" class="col-md-4 pt-2 pb-2">
+              <span v-html="note.name"></span>
+              <span v-html="note.description"></span>
+            </li>
+          </ul>
+        </div>
+        <div v-if="quantidadeRegistros <= 0">
+              <p class="mt-2">Nenhum evento cadastrado!</p>
+        </div>
+      </v-flex>
+    </v-layout>
+  </v-app>
+</div>
+  
             </div>
           </div>
       </div>
@@ -198,8 +225,8 @@
                             <li v-for="msg in msnEnviadas"  class="col-md-4 pt-2 pb-2">
                                 <div class="card">
                                   <div class="card-body">
-                                    <p class="card-text">{{ msg.message }}</p>
-                                    <span>{{ msg.timecreated }} - {{ msg.fullname }}</span>
+                                    <p class="card-text">"{{ msg.message }}"</p>
+                                    <span>{{ msg.timecreated | formatar_data }} - {{ msg.fullname }}</span>
                                   </div>
                                 </div>
                             </li>
@@ -222,18 +249,6 @@
       <!-- -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
       <!-- Formulario contato sugestao -->
       <div class="container-fluid parallax">
         <div class="container">
@@ -252,6 +267,7 @@
         </div>
       </div>
       <!-- -->
+
       
       <!-- Apoio -->
       <div class="container pt-5 pb-5">
@@ -284,7 +300,6 @@
       </div>
       <!-- -->
 
-      <script src="assets/js/init.js"></script>
       
 <?php
   require('assets/template/footer-nav.php');

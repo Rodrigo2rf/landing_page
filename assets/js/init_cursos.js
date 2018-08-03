@@ -70,10 +70,13 @@ var app = new Vue({
     },
     mounted () {    
         q = this.$route.query.q;
-        if ( q == null ){
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
-        }else{
+        c = this.$route.query.c;
+        if ( c != null ){
+            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=fullname&value='+c+'&moodlewsrestformat=json';
+        }else if( q != null){
             url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+q+'&moodlewsrestformat=json';
+        }else{
+            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=fullname&moodlewsrestformat=json';           
         }
         axios
         .get(url)

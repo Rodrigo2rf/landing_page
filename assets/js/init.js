@@ -4,24 +4,24 @@
  * SESSAO: SLIDESHOW
  * 
  */
-new Vue({
-    el: '#showcase_landing_page',
-        data: {
-            imagensShowcase: [],
-            loading: true,
-        },
-        computed: {
-            quantidadeSliders: function () {
-                return this.imagensShowcase.length;
-            }
-        },
-        mounted () {
-            axios
-            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-            .then(response => (this.imagensShowcase = response.data ))
-            .finally(() => this.loading = true)
-        }  
-})
+// new Vue({
+//     el: '#showcase_landing_page',
+//         data: {
+//             imagensShowcase: [],
+//             loading: true,
+//         },
+//         computed: {
+//             quantidadeSliders: function () {
+//                 return this.imagensShowcase.length;
+//             }
+//         },
+//         mounted () {
+//             axios
+//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+//             .then(response => (this.imagensShowcase = response.data ))
+//             .finally(() => this.loading = true)
+//         }  
+// })
 
 
 
@@ -172,11 +172,58 @@ new Vue({
         msnEnviadas: [],
         loading: true,
     },
+    filters: {
+        formatar_data: function(value) {
+
+            var valor_formatado = new Date(value * 1000);
+ 
+            // Months array
+            var months_arr = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+
+            // Year
+            var year = valor_formatado.getFullYear();
+
+            // Month
+            var month = months_arr[valor_formatado.getMonth()];
+
+            // Day
+            var day = valor_formatado.getDate();
+
+            return day+'-'+month+'-'+year;
+        }
+    },
     computed: {
         quantidadeRegistros: function () {
             return this.msnEnviadas.length;
         }
     },
+    // watch: {
+    // msnEnviadas: function () {
+    //     alert("sdfg");
+    //     for(var i=0; i < this.msnEnviadas.length; i++){
+    //         alert("sdfdgsgfgdg");
+    //         console.log(this.msnEnviadas[i]);
+    //         var valor_formatado = new Date(msnEnviadas[i].timecreated * 1000);
+    //                     // Months array
+    //         var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    //         // Year
+    //         var year = valor_formatado.getFullYear();
+
+    //         // Month
+    //         var month = months_arr[valor_formatado.getMonth()];
+
+    //         // Day
+    //         var day = valor_formatado.getDate();
+
+    //         msnEnviadas[i].timecreated = day+'-'+month+'-'+year;
+
+
+    //         console.log(this.msnEnviadas[i]);
+    //     }
+
+    //     }
+    // },
     mounted () {
       axios
         .get('http://localhost/m35/blocks/user_opinion/display_messages.php')
@@ -186,3 +233,78 @@ new Vue({
         .finally(() => this.loading = true)
     }    
 })
+
+
+new Vue({
+    el: '#calendario',
+    data: {
+      date: null,
+      pickerDate: null,
+      allNotes: []
+    },
+    watch: {
+        pickerDate (val) {
+            this.createDate(val);
+        }
+    },
+    computed: {
+        quantidadeRegistros: function () {
+            return this.allNotes.length;        
+        }
+    },
+    created() {
+        this.createDate(null);
+    },
+     methods:{
+        getEvents: function(up_timestart, up_timefinish){
+            return axios
+                .get('http://localhost/moodle/webservice/rest/server.php?wstoken=f3138b500b2824636c345bab8fa6fed7&wsfunction=core_calendar_get_calendar_events&options[timestart]='+up_timestart+'&options[timeend]='+up_timefinish+'&moodlewsrestformat=json')
+                .then(response => ( this.allNotes = response.data.events  ))
+                .finally(() => this.loading = true)
+        },
+        createDate: function(val){
+
+            if( val == null){
+                var date = new Date();
+            }else{
+                date = new Date(val + '-' + 1);
+            }
+
+            var timestart = new Date(date.getFullYear(), date.getMonth(), 1);
+            var timefinish = new Date(date.getFullYear(), date.getMonth() + 1);  
+    
+            start_month = timestart.getMonth() + 1;
+            start_end = start_month + 1;
+            
+            new_timestart = timestart.getFullYear()+'-'+start_month+'-'+timestart.getDate();
+            new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate();   
+        
+            up_timestart = new Date(new_timestart).getTime() / 1000;
+            up_timefinish = new Date(new_timefinish).getTime() / 1000;
+    
+            this.getEvents(up_timestart, up_timefinish);
+        }
+    }
+
+});
+
+// filters: {
+//     formatar_data: function(value) {
+//         alert("adsf");
+//         // var valor_formatado = new Date(text * 1000);
+
+//         // // Months array
+//         // var months_arr = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+//         // // Year
+//         // var year = valor_formatado.getFullYear();
+
+//         // // Month
+//         // var month = months_arr[valor_formatado.getMonth()];
+
+//         // // Day
+//         // var day = valor_formatado.getDate();
+
+//         return 'dfsdfsfs';
+//     }
+// },
