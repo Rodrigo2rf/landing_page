@@ -33,13 +33,11 @@ var app = new Vue({
     watch: {
         rows: function () {
             for(var i=0; i < this.rows.length; i++){
-                if(this.rows[i].id != 1){
                     if( this.rows[i].overviewfiles[0] == null ){ 
-                        this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                    }else{
-                        this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+                         this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+                     }else{
+                         this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
                     }
-                }
             }
         },
     },

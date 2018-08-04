@@ -48,7 +48,7 @@ new Vue({
             if( this.listCursosPresenciais.length == 0 ){
                 return coluns = { conteudo: 12, curso: null }
             } else if( this.listCursosPresenciais.length == 1 ){
-                return coluns = { conteudo: 9, cursos: 3, qtd: this.listCursosPresenciais.length }
+                return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length == 2 ){
                 return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length >= 3 ){
@@ -101,11 +101,11 @@ new Vue({
                 if( this.listCursosSemiPresenciais.length == 0 ){
                     return coluns = { conteudo: 12, curso: null }
                 } else if( this.listCursosSemiPresenciais.length == 1 ){
-                    return coluns = { conteudo: 9, cursos: 3 }
+                    return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosSemiPresenciais.length }
                 } else if( this.listCursosSemiPresenciais.length == 2 ){
-                    return coluns = { conteudo: 6, cursos: 6 }
+                    return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosSemiPresenciais.length }
                 } else if( this.listCursosSemiPresenciais.length >= 3 ){
-                    return coluns = { conteudo: 3, cursos: 9 }
+                    return coluns = { conteudo: 3, cursos: 9, qtd: this.listCursosSemiPresenciais.length }
                 }
             }
         },
@@ -153,11 +153,11 @@ new Vue({
                 if( this.listCursosEAD.length == 0 ){
                     return coluns = { conteudo: 12, curso: null }
                 } else if( this.listCursosEAD.length == 1 ){
-                    return coluns = { conteudo: 9, cursos: 3 }
+                    return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosEAD.length }
                 } else if( this.listCursosEAD.length == 2 ){
-                    return coluns = { conteudo: 6, cursos: 6 }
+                    return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosEAD.length }
                 } else if( this.listCursosEAD.length >= 3 ){
-                    return coluns = { conteudo: 3, cursos: 9 }
+                    return coluns = { conteudo: 3, cursos: 9, qtd: this.listCursosEAD.length }
                 }
             }
         },

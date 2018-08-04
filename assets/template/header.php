@@ -18,8 +18,7 @@
         <link rel="stylesheet" href="assets/css/dist/calendar-vuetify.min.css"> 
         <!-- Custom styles for this template -->
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <link href="assets/css/dist/full-slider.css" rel="stylesheet">      
         

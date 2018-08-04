@@ -28,11 +28,10 @@
     </section>
 </div>
 
-<script src="assets/js/init_curso.js"></script>
-
 <?php
 
     require('assets/template/footer-nav.php');
+    require('assets/template/footer-script-type-c.php');
     require('assets/template/footer.php');
 
 ?>

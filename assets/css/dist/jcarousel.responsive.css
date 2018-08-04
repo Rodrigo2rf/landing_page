@@ -100,3 +100,9 @@ a.jcarousel-control-prev:hover {
     background: #c3281e;
     border: 2px solid #c3281e;
 }
+
+@media (max-width:576px){
+    .jcarousel-pagination{
+        display: none !important;
+    }
+}

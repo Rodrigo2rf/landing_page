@@ -110,7 +110,7 @@
                   <!-- -->
                </div>
               <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-                  <h4 class="color-green">Cursos Presenciais</h4>
+                  <h4 class="color-green">Cursos SemiPresenciais</h4>
                   <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.
                   </p>
                   <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
@@ -166,12 +166,11 @@
       <!-- -->
 
       <!-- calendario -->
-      <div class="container-fluid bg-soft-blue pt-5 pb-5">
+      <div id="calendario" class="container-fluid bg-soft-blue pt-5 pb-5">
           <div class="container">
 
               <div class="row">
-
-<div id="calendario">
+                <div class="col-12">
   <v-app id="inspire">
     <v-layout row wrap>
             
@@ -201,8 +200,7 @@
       </v-flex>
     </v-layout>
   </v-app>
-</div>
-  
+            </div>
             </div>
           </div>
       </div>
@@ -250,7 +248,7 @@
 
 
       <!-- Formulario contato sugestao -->
-      <div class="container-fluid parallax">
+      <div id="contato" class="container-fluid parallax">
         <div class="container">
           <div class="row">
             <div class="col-md-7 d-flex align-items-center">
@@ -303,5 +301,6 @@
       
 <?php
   require('assets/template/footer-nav.php');
+  require('assets/template/footer-script-type-a.php');
   require('assets/template/footer.php');
 ?>

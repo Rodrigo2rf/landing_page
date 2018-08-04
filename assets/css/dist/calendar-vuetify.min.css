@@ -10533,4 +10533,13 @@
   .v-date-picker-header{
     border-bottom: 1px solid rgba(0,0,0,0.2);
   }
+
+  @media (max-width:576px){
+    ul.eventos-calendario{
+      margin: 0px !important;
+    }
+    ul.eventos-calendario li{
+      margin-left: 0px !important;
+    }
+  }
   /*# sourceMappingURL=vuetify.css.map*/

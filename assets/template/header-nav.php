@@ -7,14 +7,14 @@
 
 
 <!-- Barra de menu -->
-<div class="container-fluid barra-menu d-flex">
+<!-- <div class="container-fluid barra-menu d-flex">
     <div class="container">
     <div class="row text-center">
         <div class="col-md-2 d-flex align-items-center">logo</div>
-        <div class="col-md-1 offset-md-2 menu-horizontal no-gutters"><a href="">Home</a></div>
+        <div class="col-md-1 offset-md-2 menu-horizontal no-gutters"><a href="<?=url_index?>">Home</a></div>
         <div class="col-md-1 menu-horizontal no-gutters"><a href="">Curso</a></div>
-        <div class="col-md-1 menu-horizontal no-gutters"><a href="">Calendário</a></div>
-        <div class="col-md-1 menu-horizontal no-gutters"><a href="">Contato</a></div>
+        <div class="col-md-1 menu-horizontal no-gutters"><a href="<?=url_calendario?>">Agenda</a></div>
+        <div class="col-md-1 menu-horizontal no-gutters"><a href="<?=url_contato?>">Contato</a></div>
         <div class="col-md-2 menu-horizontal">
             <ul class="list-inline icons-redes-sociais text-center">
                 <li class="list-inline-item">
@@ -36,4 +36,4 @@
         </div>
     </div>
     </div>
-</div>
+</div> -->

@@ -40,10 +40,9 @@
             <div class="row">
                 <ul class="lista-cursos">
                     <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-md-3 pt-2 pb-4">
-                        
                         <a :href="'/landing_page/curso.php?q=' + curso.id">
                         <div class="card">
-                            <div class="card-img background-img mb-2 mt-4"></div>
+                            <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + curso.img_capa_curso + ')' }"></div>
                             <div class="card-body">
                                 <h5>{{ curso.fullname }}</h5>
                             <p class="card-text" v-html="$options.filters.tratar_string(curso.summary)"></p>
@@ -65,11 +64,10 @@
 
 </div>
 
- <script src="assets/js/init_cursos.js"></script>
-
 <?php
-
+  
   require('assets/template/footer-nav.php');
+  require('assets/template/footer-script-type-b.php');
   require('assets/template/footer.php');
 
 ?>
