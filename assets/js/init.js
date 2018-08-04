@@ -223,10 +223,7 @@ new Vue({
             return this.allNotes.length;        
         }
     },
-    created() {
-        this.createDate(null);
-    },
-     methods:{
+    methods:{
         getEvents: function(up_timestart, up_timefinish){
             return axios
                 .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_calendar_get_calendar_events&options[timestart]='+up_timestart+'&options[timeend]='+up_timefinish+'&moodlewsrestformat=json')
@@ -235,15 +232,11 @@ new Vue({
         },
         createDate: function(val){
 
-            if( val == null){
-                var date = new Date();
-            }else{
-                date = new Date(val + '-' + 1);
-            }
+            date = new Date(val+'-01 23:59:59');
             
             var timestart 	= new Date(date.getFullYear(), date.getMonth(), 1);
-            var timefinish 	= new Date(date.getFullYear(), date.getMonth() + 1);  
-           
+            var timefinish 	= new Date(date.getFullYear(), date.getMonth() + 1,  1);  
+
             start_month = timestart.getMonth() + 1;
             if( start_month == 12 ){
             	start_end = 1;
@@ -251,26 +244,14 @@ new Vue({
             	start_end = start_month + 1;
             }
             
-            new_timestart = timestart.getFullYear()+'-'+start_month+'-'+timestart.getDate();
-            new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate(); 
-            
-            new_timestart  = new_timestart  + ' 00:00:00';
-        	new_timefinish = new_timefinish + ' 00:00:00';
+            new_timestart = start_month+' '+timestart.getDate() +', '+timestart.getFullYear();
+            new_timefinish = start_end+' '+timefinish.getDate() +', '+timefinish.getFullYear();            
+
+            new_date_start  = String(new_timestart  + ' 20:59:59');
+        	new_date_end    = String(new_timefinish + ' 20:59:59');
         
             up_timestart = new Date(new_timestart).getTime() / 1000;
             up_timefinish = new Date(new_timefinish).getTime() / 1000;
-
-//             var timestart = new Date(date.getFullYear(), date.getMonth(), 1);
-//             var timefinish = new Date(date.getFullYear(), date.getMonth() + 1);  
-    
-//             start_month = timestart.getMonth() + 1;
-//             start_end = start_month + 1;
-            
-//             new_timestart = timestart.getFullYear()+'-'+start_month+'-'+timestart.getDate();
-//             new_timefinish = timefinish.getFullYear()+'-'+start_end+'-'+timefinish.getDate();   
-        
-//             up_timestart = new Date(new_timestart).getTime() / 1000;
-//             up_timefinish = new Date(new_timefinish).getTime() / 1000;
     
             this.getEvents(up_timestart, up_timefinish);
         }
