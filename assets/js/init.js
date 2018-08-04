@@ -109,6 +109,17 @@ new Vue({
                 }
             }
         },
+        watch: {
+            listCursosSemiPresenciais: function () {
+                for(var i=0; i < this.listCursosSemiPresenciais.length; i++){
+                    if( this.listCursosSemiPresenciais[i].overviewfiles[0] == null ){ 
+                        this.listCursosSemiPresenciais[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+                    }else{
+                        this.listCursosSemiPresenciais[i].img_capa_curso = this.listCursosSemiPresenciais[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+                    }
+                }
+            }
+        },
         mounted () {
           axios
             .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value=3&moodlewsrestformat=json')
@@ -147,6 +158,17 @@ new Vue({
                     return coluns = { conteudo: 6, cursos: 6 }
                 } else if( this.listCursosEAD.length >= 3 ){
                     return coluns = { conteudo: 3, cursos: 9 }
+                }
+            }
+        },
+        watch: {
+            listCursosEAD: function () {
+                for(var i=0; i < this.listCursosEAD.length; i++){
+                    if( this.listCursosEAD[i].overviewfiles[0] == null ){ 
+                        this.listCursosEAD[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+                    }else{
+                        this.listCursosEAD[i].img_capa_curso = this.listCursosEAD[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+                    }
                 }
             }
         },
