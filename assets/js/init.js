@@ -10,6 +10,29 @@ new Vue({
             imagensShowcase: [],
             loading: true,
         },
+        watch:{
+            imagensShowcase: function () {
+                for(var i=0; i < this.imagensShowcase.length; i++){
+                    var string = this.imagensShowcase[i].anexopath;
+
+                    type = string.split(';');
+                    string = type[0].split('/');
+                    string = string.pop();
+
+                    if ( string !== ''){
+                        if( type[1] === 'file' || type[1] === 'image' ){
+                            this.imagensShowcase[i].href = 'http://eadh.liga.org.br/moodle/blocks/showcase/uploads/' + string;
+                        }
+                        if( type[1] === 'text' ){
+                            this.imagensShowcase[i].href = 'http://'+string;
+                        }
+                    }else{ 
+                        this.imagensShowcase[i].href = 0;
+                    }
+
+                }
+            }
+        },
         computed: {
             quantidadeSliders: function () {
                 return this.imagensShowcase.length;

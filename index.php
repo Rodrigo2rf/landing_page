@@ -18,7 +18,8 @@
        <li v-for="(item, index) in imagensShowcase" data-target="#carouselExampleIndicators" data-slide-to="{{index}}" class="gatilhos-slide"></li>
      </ol>
      <div class="carousel-inner" role="listbox">
-       <div  v-for="(item, index) in imagensShowcase" class="carousel-item" :style="{ backgroundImage: 'url(http://eadh.liga.org.br/moodle/' + item.imgpath + ' )' } ">
+       <div v-for="(item, index) in imagensShowcase" class="carousel-item" :style="{ backgroundImage: 'url(http://localhost/moodle/' + item.imgpath + ' )' } ">
+        <a :href="item.href" v-if="item.href" class="link_slideshow" target="_blank"></a>
        </div> 
      </div>
      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
