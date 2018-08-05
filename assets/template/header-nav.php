@@ -43,11 +43,11 @@
         </div>
         <div class="col-md-1 offset-md-2 menu-horizontal no-gutters"><a href="<?=url_index?>">Home</a></div>
         <div class="col-md-1 menu-horizontal no-gutters dropdown">
-            <a href="#">Cursos</a>
+            <a href="<?=url_cursos?>">Cursos</a>
             <div class="dropdown-content text-left">
-                <a href="<?=url_curso_presencial?>">Presenciais</a>
-                <a href="<?=url_curso_semipresencial?>">Semi-Presenciais</a>
-                <a href="<?=url_curso_ead?>">À distância</a>
+                <a href="<?=url_redirect_presencial?>">Presenciais</a>
+                <a href="<?=url_redirect_semipresencial?>">Semi-Presenciais</a>
+                <a href="<?=url_redirect_ead?>">À distância</a>
             </div>
         </div>
         <div class="col-md-1 menu-horizontal no-gutters"><a href="<?=url_calendario?>">Agenda</a></div>

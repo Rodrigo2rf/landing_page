@@ -17,7 +17,11 @@
         <div v-if="exite">
             <div class="row"> 
                 <div class="col-md-9">
+                    
                     <h2>{{ curso.fullname }}</h2>
+
+                    <img :src="curso.img_capa_curso" class="capa-curso">
+
                     <p v-html="curso.summary"></p>
                 </div>
                 <div class="col-md-3">

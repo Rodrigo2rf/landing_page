@@ -230,6 +230,10 @@ section{
             a .card:hover { border: 1px solid #abdbc7; -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; -moz-box-shadow: 0px 0px 12px -1px #abdbc7; box-shadow: 0px 0px 12px -1px #abdbc7; }
         }
     }
+    .capa-curso{
+        margin: 10px 0px;
+        max-width: 400px;
+    }
 }
 
 /* Pagina com todos os cursos 'saiba-mais' */
@@ -251,12 +255,14 @@ section{
             border: 1px solid #d2d2d2;
             color: $var-color-green;      
         }
-        a.link-menu-de-cursos:hover{
+        a.link-menu-de-cursos:hover,
+        a.link-menu-de-cursos.ativo{
             text-decoration: none;
             box-sizing: border-box;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             border-bottom: 1px solid $var-color-red;
+            background: linear-gradient(0deg, $var-color-red 2px, white 5px);
         }
     }
 }
@@ -316,6 +322,8 @@ section{
         text-decoration: none;
         display: block;
         border-bottom: 4px solid white;
+        border-top:1px solid #e1e1e1;
+        background: white;
         line-height: 25px !important;
     }
 }
@@ -325,19 +333,18 @@ section{
 }
 
 .menu-mobile{
-.menu-link {
-    float: left;
-    i{
-        font-size: 40px;
-        margin-top: 16px;
-        color: $var-color-green;
-        margin-right: 15px;
+    .menu-link {
+        float: left;
+        i{
+            font-size: 40px;
+            margin-top: 16px;
+            color: $var-color-green;
+            margin-right: 15px;
+        }
     }
-}
-
-img{
-    margin: 10px 0px;
-}
+    img{
+        margin: 10px 0px;
+    }
 }
 
 .wrap {

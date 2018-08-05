@@ -3,6 +3,8 @@
   require('assets/template/header.php');
   require('assets/template/header-nav.php');
 
+  if(isset($_GET['q'])){ $id_cursos = $_GET['q']; }
+
 ?>
 
 <div id="app">
@@ -17,21 +19,22 @@
     </div>
 
       
-    <div class="row justify-content-center menu-de-cursos">
-         <a href="<?=url_redirect_presencial?>" class="link-menu-de-cursos col-md-2 text-center">
+    <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
+         <a href="<?=url_redirect_presencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 2){ echo 'ativo'; }?>">
             Cursos<br>Presenciais
         </a>
-        <a href="<?=url_redirect_semipresencial?>" class="link-menu-de-cursos col-md-2 text-center">
+        <a href="<?=url_redirect_semipresencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 3){ echo 'ativo'; }?>">
             Cursos<br>Semipresenciais
         </a>
-        <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center"> 
+        <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 1){ echo 'ativo'; }?>"> 
             Cursos<br>online / EAD
         </a> 
     </div>
-
 </section>
 
-<section class="container container-cursos">
+<section class="container-fluid">
+
+    <div class="container container-cursos">
      
         <div v-if="!showList" color="error">
             Nenhum curso encontrado.
@@ -60,6 +63,7 @@
                 </ul>
             </nav>
         </div>
+    </div>
 </section>
 
 </div>
