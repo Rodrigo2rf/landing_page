@@ -7,7 +7,7 @@
 
 <!-- SLIDER --> 
 <header id="showcase_landing_page">
-   <div class="barra-pesquisar">
+   <div class="barra-pesquisar d-none d-sm-block">
      <form action="cursos.php" method="get">
        <input name="c" type="text">
        <button><img src="assets/img/icone_marcacao/search.svg"></button>
