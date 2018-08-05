@@ -4,24 +4,24 @@
  * SESSAO: SLIDESHOW
  * 
  */
-new Vue({
-    el: '#showcase_landing_page',
-        data: {
-            imagensShowcase: [],
-            loading: true,
-        },
-        computed: {
-            quantidadeSliders: function () {
-                return this.imagensShowcase.length;
-            }
-        },
-        mounted () {
-            axios
-            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-            .then(response => (this.imagensShowcase = response.data ))
-            .finally(() => this.loading = true)
-        }  
-})
+// new Vue({
+//     el: '#showcase_landing_page',
+//         data: {
+//             imagensShowcase: [],
+//             loading: true,
+//         },
+//         computed: {
+//             quantidadeSliders: function () {
+//                 return this.imagensShowcase.length;
+//             }
+//         },
+//         mounted () {
+//             axios
+//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+//             .then(response => (this.imagensShowcase = response.data ))
+//             .finally(() => this.loading = true)
+//         }  
+// })
 
 
 
@@ -48,7 +48,7 @@ new Vue({
             if( this.listCursosPresenciais.length == 0 ){
                 return coluns = { conteudo: 12, curso: null }
             } else if( this.listCursosPresenciais.length == 1 ){
-                return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosPresenciais.length }
+                return coluns = { conteudo: 9, cursos: 3, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length == 2 ){
                 return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosPresenciais.length }
             } else if( this.listCursosPresenciais.length >= 3 ){
@@ -101,7 +101,7 @@ new Vue({
                 if( this.listCursosSemiPresenciais.length == 0 ){
                     return coluns = { conteudo: 12, curso: null }
                 } else if( this.listCursosSemiPresenciais.length == 1 ){
-                    return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosSemiPresenciais.length }
+                    return coluns = { conteudo: 9, cursos: 3, qtd: this.listCursosSemiPresenciais.length }
                 } else if( this.listCursosSemiPresenciais.length == 2 ){
                     return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosSemiPresenciais.length }
                 } else if( this.listCursosSemiPresenciais.length >= 3 ){
@@ -153,7 +153,7 @@ new Vue({
                 if( this.listCursosEAD.length == 0 ){
                     return coluns = { conteudo: 12, curso: null }
                 } else if( this.listCursosEAD.length == 1 ){
-                    return coluns = { conteudo: 7, cursos: 5, qtd: this.listCursosEAD.length }
+                    return coluns = { conteudo: 9, cursos: 3, qtd: this.listCursosEAD.length }
                 } else if( this.listCursosEAD.length == 2 ){
                     return coluns = { conteudo: 6, cursos: 6, qtd: this.listCursosEAD.length }
                 } else if( this.listCursosEAD.length >= 3 ){

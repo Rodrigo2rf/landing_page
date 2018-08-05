@@ -18,13 +18,13 @@
 
       
     <div class="row justify-content-center menu-de-cursos">
-         <a href="#" class="link-menu-de-cursos col-md-2 text-center">
+         <a href="<?=url_redirect_presencial?>" class="link-menu-de-cursos col-md-2 text-center">
             Cursos<br>Presenciais
         </a>
-        <a href="#" class="link-menu-de-cursos col-md-2 text-center">
+        <a href="<?=url_redirect_semipresencial?>" class="link-menu-de-cursos col-md-2 text-center">
             Cursos<br>Semipresenciais
         </a>
-        <a href="#" class="link-menu-de-cursos col-md-2 text-center"> 
+        <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center"> 
             Cursos<br>online / EAD
         </a> 
     </div>
@@ -39,9 +39,9 @@
         <div v-if="showList"> 
             <div class="row">
                 <ul class="lista-cursos">
-                    <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-md-3 pt-2 pb-4">
+                    <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-sm-6 col-md-3 pt-2 pb-4">
                         <a :href="'/landing_page/curso.php?q=' + curso.id">
-                        <div class="card">
+                        <div class="card col-sm-6 col-md-3">
                             <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + curso.img_capa_curso + ')' }"></div>
                             <div class="card-body">
                                 <h5>{{ curso.fullname }}</h5>

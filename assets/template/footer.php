@@ -1,6 +1,22 @@
         <script>
           $(document).ready(function(){
-            
+
+              $('.menu-link').bigSlide();
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 300) {
+            $('.ir-para-topo').fadeIn();
+        } else {
+            $('.ir-para-topo').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.ir-para-topo').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+  
             $('.ir-para-topo').click(function() {      
                 $('body,html').animate({
                     scrollTop : 0           

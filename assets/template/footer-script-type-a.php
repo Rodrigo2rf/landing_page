@@ -11,8 +11,12 @@
 <script src="assets/js/vuetify.min.js"></script>
 <script src="assets/js/moment.min.js"></script>
 
+<script src="assets/js/bigSlide.js"></script>
+
 <script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/js/init.js"></script>
+
+<script src="assets/js/menu-responsivo.js"></script>
 
 <link rel="stylesheet" href="assets/css/dist/style.css">
 <link rel="stylesheet" href="assets/css/dist/jcarousel.css">

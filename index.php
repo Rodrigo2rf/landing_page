@@ -5,8 +5,10 @@
 
 ?>
 
+<div>
+
       <!-- SLIDER --> 
-      <header id="showcase_landing_page">
+      <!-- <header id="showcase_landing_page">
         <div class="barra-pesquisar">
           <form action="cursos.php" method="get">
             <input name="c" type="text">
@@ -30,7 +32,7 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </header>
+      </header> -->
       
       <!-- PRESENCIAL -->
       <div id="lista-cursos-presenciais" class="container-fluid bg-white">
@@ -78,7 +80,7 @@
       <div id="lista-cursos-semi-presenciais" class="container-fluid bg-soft-blue">
          <div class="container container-cursos">
             <div class="row">
-            <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
+            <div :class="['order-2 col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
                   <!-- Carousel -->
                   <div class="wrapper">
                      <div class="jcarousel-wrapper">
@@ -109,7 +111,7 @@
                   </div>
                   <!-- -->
                </div>
-              <div :class="['col-md-'+quantidadeRegistros.conteudo]">
+              <div :class="['order-1 order-md-12 col-md-'+quantidadeRegistros.conteudo]">
                   <h4 class="color-green">Cursos SemiPresenciais</h4>
                   <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.
                   </p>
@@ -125,7 +127,7 @@
          <div class="container container-cursos">
             <div class="row">
               <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-                  <h4 class="color-green">Cursos Presenciais</h4>
+                  <h4 class="color-green">Cursos a distância</h4>
                   <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis imampola pa arma uma pindureta.
                   </p>
                   <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=1">Acessar</a>
@@ -297,7 +299,6 @@
         </div>
       </div>
       <!-- -->
-
       
 <?php
   require('assets/template/footer-nav.php');
