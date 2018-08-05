@@ -226,7 +226,6 @@ new Vue({
  * 
  * PAGINA: INDEX
  * SESSAO: RENDERIZAR O CALENDARIO
- * 
  */
 new Vue({
     el: '#calendario',
