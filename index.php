@@ -178,7 +178,7 @@
       <div class="row">
         <v-app id="inspire">
             <v-layout wrap>
-              <div class="col-md-6 col-sm-12">
+              <div class="col-md-6 col-sm-12 mb-2">
                   <h3 class="color-green text-left">Agenda</h3>
                   <p class="text-left">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí umpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
                   <v-date-picker ref="picker" v-model="date" :picker-date.sync="pickerDate" full-width></v-date-picker>
