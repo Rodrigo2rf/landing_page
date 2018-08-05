@@ -20,7 +20,7 @@
                     
                     <h2>{{ curso.fullname }}</h2>
 
-                    <img :src="curso.img_capa_curso" class="capa-curso">
+                    <img :src="curso.img_capa_curso" class="col capa-curso">
 
                     <p v-html="curso.summary"></p>
                 </div>
