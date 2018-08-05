@@ -111,7 +111,6 @@ header{
 // formulario contato/sugestao
 .parallax{
     background-image:url("../../img/wallpaper-paralax.jpg");
-    padding: 100px 0px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -130,6 +129,10 @@ header{
         margin-bottom: 10px;
         border: none;
         background-color: rgba(255, 255, 255, 0.7);
+    }
+    .formulario-contato-index button:hover{
+        background: white;
+        color: $var-color-green;
     }
 }
 
@@ -175,14 +178,18 @@ header{
         border-left: 1px solid #fff;
     }
     .copyright{
-        font-size: 12px;
+        font-size: 11px;
+        text-align: right;
+        p{
+            margin-bottom: 3px;
+        }
     }
     ul{
         margin: 0px;
         padding: 0px;
         list-style-type: none;
     }
-    ul li a{
+    ul li a, a{
         color: #fff;
     }
     .ir-para-topo{
@@ -212,8 +219,6 @@ section{
 
 
 .container-cursos { 
-    padding-top: 100px; 
-    padding-bottom: 100px; 
     ul.lista-cursos { text-align: center; 
         width: 10000em; position: relative; list-style: none; margin: 0; padding: 0;
         h5 { margin-bottom: 20px; }
@@ -257,15 +262,29 @@ section{
 }
 
 #calendario{
-    .eventos-calendario li{
+    .eventos-calendario{
         list-style-type: none;
         min-width: 100%;
         background: white;
         margin-bottom: 10px;
         border: 1px solid $var-color-green;
         display: inherit;
+        height: auto;
+        overflow: hidden;
+        padding-top: 15px;
+        .show-date{ 
+            font-weight: bolder;
+            color: $var-color-green;
+            p.dia_evento{
+                font-size: 30px;
+            }
+            p.mes_evento{
+                font-size: 20px;
+                line-height: 5px;
+            }
+        }
     }
-    li .titulo{
+    .titulo{
         font-weight: bold;
     }
 }
@@ -346,6 +365,18 @@ img{
 .menu-mobile{
     display: none !important;  
 }
+
+.carousel-item {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top;
+    background-size: 100% auto;
+    width: 100vw;
+    height: 30vw;
+  }
+
 @media (max-width:992px){
     .barra-menu{
         display: none !important;
@@ -353,4 +384,7 @@ img{
     .menu-mobile{
         display: block !important;  
     }  
+    .container-rodape .copyright{
+        text-align: center;
+    }
 }

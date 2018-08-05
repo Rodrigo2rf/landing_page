@@ -4,24 +4,24 @@
  * SESSAO: SLIDESHOW
  * 
  */
-// new Vue({
-//     el: '#showcase_landing_page',
-//         data: {
-//             imagensShowcase: [],
-//             loading: true,
-//         },
-//         computed: {
-//             quantidadeSliders: function () {
-//                 return this.imagensShowcase.length;
-//             }
-//         },
-//         mounted () {
-//             axios
-//             .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
-//             .then(response => (this.imagensShowcase = response.data ))
-//             .finally(() => this.loading = true)
-//         }  
-// })
+new Vue({
+    el: '#showcase_landing_page',
+        data: {
+            imagensShowcase: [],
+            loading: true,
+        },
+        computed: {
+            quantidadeSliders: function () {
+                return this.imagensShowcase.length;
+            }
+        },
+        mounted () {
+            axios
+            .get('http://eadh.liga.org.br/moodle/blocks/showcase/display_slideshow.php')
+            .then(response => (this.imagensShowcase = response.data ))
+            .finally(() => this.loading = true)
+        }  
+})
 
 
 
@@ -238,6 +238,14 @@ new Vue({
     watch: {
         pickerDate (val) {
             this.createDate(val);
+        }
+    },
+    filters: {
+        tratar_data (dia) {
+            var date = new Date(dia*1000);
+            var months_arr = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+                    
+            return '<p class="dia_evento mb-0">' + date.getDate() +'</p><p class="mes_evento">'+ months_arr[date.getMonth()]+'<p>';
         }
     },
     computed: {
