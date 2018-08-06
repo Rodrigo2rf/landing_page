@@ -225,6 +225,10 @@ new Vue({
             var year = valor_formatado.getFullYear();
             var month = months_arr[valor_formatado.getMonth()];
             var day = valor_formatado.getDate();
+            
+            if( day <= 9){
+                day = 0 + '' + day;
+            }
 
             return day+' '+month+' '+year;
         }
