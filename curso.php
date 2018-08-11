@@ -9,7 +9,7 @@
 
     <section id="info-cursos" class="container-fluid"> 
         <div class="row justify-content-md-center">
-            <div class="col col-lg-8 card-informacoes-curso">
+            <div class="col col-lg-6 card-informacoes-curso">
                 <div class="row text-center">
                     <div class="col"><span>{{ curso.dia }}</span> <br> {{ curso.mes }}</div>
                     <div class="col"><span>{{ curso.horas }}</span> <br> HORAS/AULA</div>

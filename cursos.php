@@ -18,7 +18,6 @@
         <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
     </div>
 
-      
     <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
          <a href="<?=url_redirect_presencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 2){ echo 'ativo'; }?>">
             Cursos<br>Presenciais
@@ -48,7 +47,7 @@
                             <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + curso.img_capa_curso + ')' }"></div>
                             <div class="card-body">
                                 <h5>{{ curso.fullname }}</h5>
-                            <p class="card-text" v-html="$options.filters.tratar_string(curso.summary)"></p>
+                            <p class="card-text" v-html="curso.descricao"></p>
                             </div>
                         </div>
                         </a>

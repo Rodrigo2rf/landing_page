@@ -54,7 +54,7 @@
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
                                  <div class="card-body">
                                     <h5>{{ item.fullname }}</h5>
-                                    <p class="card-text" v-html="$options.filters.tratar_string(item.summary)"></p>
+                                    <p class="card-text" v-html="item.descricao"></p>
                                  </div>
                               </div>
                            </a>
@@ -94,7 +94,7 @@
                                  </div>
                                  <div class="card-body">
                                     <h5>{{ semiPresencial.fullname }}</h5>
-                                    <p class="card-text" v-html="$options.filters.tratar_string(semiPresencial.summary)"></p>
+                                    <p class="card-text" v-html="semiPresencial.descricao"></p>
                                  </div>
                               </div>
                            </a>
@@ -147,7 +147,7 @@
                                  </div>
                                  <div class="card-body">
                                     <h5>{{ ead.fullname }}</h5>
-                                    <p class="card-text" v-html="$options.filters.tratar_string(ead.summary)"></p>
+                                    <p class="card-text" v-html="ead.descricao"></p>
                                  </div>
                               </div>
                            </a>

@@ -87,8 +87,12 @@ new Vue({
                 }else{
                     this.listCursosPresenciais[i].img_capa_curso = this.listCursosPresenciais[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
                 }
+                // recuperando itens
+                p_start = this.listCursosPresenciais[i].summary.indexOf("apresentacao-card") + 19;
+                p_end = this.listCursosPresenciais[i].summary.indexOf("</p>", p_start);
+                this.listCursosPresenciais[i].descricao = this.listCursosPresenciais[i].summary.substring(p_start, p_end);
             }
-        }
+        },
     },
     mounted () {
       axios
@@ -140,6 +144,10 @@ new Vue({
                     }else{
                         this.listCursosSemiPresenciais[i].img_capa_curso = this.listCursosSemiPresenciais[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
                     }
+                    // recuperando itens
+                    p_start = this.listCursosSemiPresenciais[i].summary.indexOf("apresentacao-card") + 19;
+                    p_end = this.listCursosSemiPresenciais[i].summary.indexOf("</p>", p_start);
+                    this.listCursosSemiPresenciais[i].descricao = this.listCursosSemiPresenciais[i].summary.substring(p_start, p_end);
                 }
             }
         },
@@ -192,8 +200,12 @@ new Vue({
                     }else{
                         this.listCursosEAD[i].img_capa_curso = this.listCursosEAD[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
                     }
+                    // recuperando itens
+                    p_start = this.listCursosEAD[i].summary.indexOf("apresentacao-card") + 19;
+                    p_end = this.listCursosEAD[i].summary.indexOf("</p>", p_start);
+                    this.listCursosEAD[i].descricao = this.listCursosEAD[i].summary.substring(p_start, p_end);
                 }
-            }
+            },
         },
         mounted () {
           axios
