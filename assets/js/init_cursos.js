@@ -20,7 +20,7 @@ var app = new Vue({
     router,
     data: {
       rows: [],
-      countOfPage: 4,
+      countOfPage: 40,
       currPage: 1,
       filter_fullname: ''
     },

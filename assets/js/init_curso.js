@@ -30,6 +30,28 @@ var app = new Vue({
             }else{
                 this.curso.img_capa_curso = this.curso.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
             }
+            
+            // recuperando itens
+            p_start = this.curso.summary.indexOf("data-preco") + 12;
+            p_end = this.curso.summary.indexOf("</p>", p_start);
+            this.curso.preco = this.curso.summary.substring(p_start, p_end);
+
+            h_start = this.curso.summary.indexOf("data-horas") + 12;
+            h_end = this.curso.summary.indexOf("</p>", h_start);
+            this.curso.horas = this.curso.summary.substring(h_start, h_end);
+
+            c_start = this.curso.summary.indexOf("data-coordenador") + 18;
+            c_end = this.curso.summary.indexOf("</p>", c_start);
+            this.curso.coordenador = this.curso.summary.substring(c_start, c_end);
+
+            d_start = this.curso.summary.indexOf("data-inicio-dia") + 17;
+            d_end = this.curso.summary.indexOf("</p>", d_start);
+            this.curso.dia = this.curso.summary.substring(d_start, d_end);
+
+            m_start = this.curso.summary.indexOf("data-inicio-mes") + 17;
+            m_end = this.curso.summary.indexOf("</p>", m_start);
+            this.curso.mes = this.curso.summary.substring(m_start, m_end);
+
         }
     },
     mounted () {
