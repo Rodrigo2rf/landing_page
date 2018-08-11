@@ -41,7 +41,7 @@
         <div v-if="showList"> 
             <div class="row">
                 <ul class="lista-cursos">
-                    <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" class="col-sm-6 col-md-3 pt-2 pb-4">
+                    <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" v-if="curso.id != 1" class="col-sm-6 col-md-3 pt-2 pb-4">
                         <a :href="'/landing_page/curso.php?q=' + curso.id">
                         <div class="card">
                             <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + curso.img_capa_curso + ')' }"></div>

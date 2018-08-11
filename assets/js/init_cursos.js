@@ -33,15 +33,15 @@ var app = new Vue({
     watch: {
         rows: function () {
             for(var i=0; i < this.rows.length; i++){
-                    if( this.rows[i].overviewfiles[0] == null ){ 
-                         this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                    }else{
-                         this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                    }
-                        // recuperando descricao
-                        p_start = this.rows[i].summary.indexOf("apresentacao-card") + 20;
-                        p_end = this.rows[i].summary.indexOf("</p>", p_start);
-                        this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
+                if( this.rows[i].overviewfiles[0] == null ){ 
+                        this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+                }else{
+                        this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+                }
+                // recuperando descricao
+                p_start = this.rows[i].summary.indexOf("apresentacao-card") + 19;
+                p_end = this.rows[i].summary.indexOf("</p>", p_start);
+                this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
 
             }
         }
