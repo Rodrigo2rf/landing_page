@@ -115,4 +115,10 @@ a.link_slideshow { width: 100%; height: 100%; display: block; }
 
 .not-display { display: none; }
 
+.card-informacoes-curso { position: absolute; bottom: -40px; padding: 20px 0px; color: #00874b; text-transform: uppercase; background: #fff; font-size: 12px; line-height: 19px; -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; -moz-box-shadow: 0px 0px 12px -1px #abdbc7; box-shadow: 0px 0px 12px -1px #abdbc7; }
+.card-informacoes-curso span { font-size: 25px; }
+
+#coordenador { background: #e5f3ed; color: #848685; }
+#coordenador h3 { color: #00874b; margin-bottom: 30px; }
+
 /*# sourceMappingURL=style.css.map */

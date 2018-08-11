@@ -9,11 +9,11 @@
 
     <section id="info-cursos" class="container-fluid"> 
         <div class="row justify-content-md-center">
-            <div class="col col-lg-8" style="background:white">
+            <div class="col col-lg-8 card-informacoes-curso">
                 <div class="row text-center">
-                    <div class="col">{{ curso.dia }} <br> {{ curso.mes }}</div>
-                    <div class="col">{{ curso.horas }} <br> HORAS/AULA</div>
-                    <div class="col">{{ curso.preco }} <br> INVESTIMENTO</div>
+                    <div class="col"><span>{{ curso.dia }}</span> <br> {{ curso.mes }}</div>
+                    <div class="col"><span>{{ curso.horas }}</span> <br> HORAS/AULA</div>
+                    <div class="col"><span>{{ curso.preco }}</span> <br> INVESTIMENTO</div>
                 </div>
             </div>
         </div>

@@ -405,3 +405,29 @@ a.link_slideshow{
 .not-display{
     display: none;
 }
+
+.card-informacoes-curso{
+    position: absolute;
+    bottom: -40px;
+    padding: 20px 0px;
+    color: $var-color-green;
+    text-transform: uppercase;
+    background: #fff;
+    font-size: 12px;
+    line-height: 19px;
+    -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; 
+    -moz-box-shadow: 0px 0px 12px -1px #abdbc7; 
+    box-shadow: 0px 0px 12px -1px #abdbc7; 
+    span{
+        font-size: 25px;
+    }
+}
+
+#coordenador{
+    background: #e5f3ed;
+    color: #848685;
+    h3{
+        color: $var-color-green;
+        margin-bottom: 30px;
+    }
+}
