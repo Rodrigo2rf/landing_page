@@ -1,4 +1,4 @@
-.barra-menu .bt-login a, .barra-menu .menu-horizontal a { width: 100%; height: 100%; display: inline-block; text-decoration: none; }
+.barra-menu .bt-login a, .barra-menu .menu-horizontal a, .btn-action a { width: 100%; height: 100%; display: inline-block; text-decoration: none; }
 
 .barra-pesquisar { bottom: 50px; text-align: center; left: 0; right: 0; margin: auto; }
 .barra-pesquisar button { background: #c3281e; border: none; width: 45px; height: 45px; cursor: pointer; }
@@ -13,7 +13,7 @@ html { font-size: 14px; color: #707070; }
 
 .bg-soft-blue { background: #e5f3ed; }
 
-h1, h2, h3, h4, h5, h6 { text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { text-transform: uppercase; font-weight: 400; }
 h1.color-white, h2.color-white, h3.color-white, h4.color-white, h5.color-white, h6.color-white { color: #fff; }
 h1.color-green, h2.color-green, h3.color-green, h4.color-green, h5.color-green, h6.color-green { color: #00874b; }
 
@@ -38,8 +38,9 @@ header .barra-pesquisar { z-index: 999; position: absolute; }
 .parallax .formulario-contato-index button:hover { background: white; color: #00874b; }
 
 .barra-menu { height: 80px; background: #fff; }
-.barra-menu .bt-login { background: green; color: white; line-height: 80px; }
+.barra-menu .bt-login { background: #00874b; color: white; line-height: 80px; transition: 0.3s; }
 .barra-menu .bt-login a { color: white; }
+.barra-menu .bt-login:hover { background: #005e34; }
 .barra-menu .row { height: 100%; }
 .barra-menu .menu-horizontal { border-left: 1px solid #d2d2d2; height: 80px; }
 .barra-menu .menu-horizontal a { line-height: 80px; color: #707070; }
@@ -59,7 +60,7 @@ header .barra-pesquisar { z-index: 999; position: absolute; }
 section { padding: 80px 0px; }
 
 .container-cursos ul.lista-cursos { text-align: center; width: 10000em; position: relative; list-style: none; margin: 0; padding: 0; }
-.container-cursos ul.lista-cursos h5 { margin-bottom: 20px; }
+.container-cursos ul.lista-cursos h6 { margin-bottom: 30px; }
 .container-cursos ul.lista-cursos .card-img { height: 75px; background-position: center; border-radius: 50%; width: 75px; margin: auto; }
 .container-cursos ul.lista-cursos .card { border-radius: initial; border: 1px solid #00874b; }
 .container-cursos ul.lista-cursos li { width: 275px; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -72,7 +73,7 @@ section { padding: 80px 0px; }
 #info-cursos { background-image: url("../../img/student.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #00874b; position: relative; min-height: 370px; }
 #info-cursos .menu-de-cursos { position: relative; bottom: -125px; }
 #info-cursos .menu-de-cursos a.link-menu-de-cursos { background: white; padding: 25px 0px; border: 1px solid #d2d2d2; color: #00874b; }
-#info-cursos .menu-de-cursos a.link-menu-de-cursos:hover, #info-cursos .menu-de-cursos a.link-menu-de-cursos.ativo { text-decoration: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-bottom: 1px solid #c3281e; background: linear-gradient(0deg, #c3281e 2px, white 5px); }
+#info-cursos .menu-de-cursos a.link-menu-de-cursos:hover, #info-cursos .menu-de-cursos a.link-menu-de-cursos.ativo { text-decoration: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-bottom: 1px solid #c3281e; color: #c3281e; background: linear-gradient(0deg, #c3281e 2px, white 5px); }
 
 #calendario .eventos-calendario { list-style-type: none; min-width: 100%; background: white; margin-bottom: 10px; border: 1px solid #00874b; display: inherit; height: auto; overflow: hidden; padding-top: 15px; }
 #calendario .eventos-calendario .show-date { font-weight: bolder; color: #00874b; }
@@ -119,6 +120,11 @@ a.link_slideshow { width: 100%; height: 100%; display: block; }
 .card-informacoes-curso span { font-size: 25px; }
 
 #coordenador { background: #e5f3ed; color: #848685; }
-#coordenador h3 { color: #00874b; margin-bottom: 30px; }
+#coordenador h4 { margin-bottom: 30px; }
+
+.btn-action { background: #00874b; color: white; width: 100%; padding: 10px; margin-top: 10px; font-size: 14px; text-transform: uppercase; border-radius: inherit; transition: 0.3s; }
+.btn-action a { color: white; }
+
+.btn-action:hover { background: #005e34; }
 
 /*# sourceMappingURL=style.css.map */

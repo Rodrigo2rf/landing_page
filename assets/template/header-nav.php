@@ -66,7 +66,7 @@
             </ul>
         </div>
         <div class="col-md-2 bt-login no-gutters">
-            <a class="text-center" href="<?=url_moodle?>">login</a>
+            <a class="text-center" href="<?=url_moodle?>">Login</a>
         </div>
     </div>
     </div>

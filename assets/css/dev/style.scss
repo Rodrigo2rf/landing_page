@@ -54,6 +54,7 @@ html{
 
 h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
+    font-weight: 400;
     &.color-white{
         color: #fff;
     }
@@ -141,13 +142,17 @@ header{
     height: $var-height;
     background: #fff;
     .bt-login{
-        background: green;
+        background: $var-color-green;
         color: white;
         line-height: $var-height;
+        transition: 0.3s;
         a{
             color: white;
             @extend %a;
         }
+    }
+    .bt-login:hover{
+        background:$var-color-hardgreen;
     }
     .row{
         height: 100%;
@@ -221,7 +226,7 @@ section{
 .container-cursos { 
     ul.lista-cursos { text-align: center; 
         width: 10000em; position: relative; list-style: none; margin: 0; padding: 0;
-        h5 { margin-bottom: 20px; }
+        h6 { margin-bottom: 30px; }
         .card-img { height: 75px; background-position: center; border-radius: 50%; width: 75px; margin: auto; }
         .card { border-radius: initial; border: 1px solid #00874b; }
         li { width: 275px; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
@@ -262,6 +267,7 @@ section{
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             border-bottom: 1px solid $var-color-red;
+            color: $var-color-red;
             background: linear-gradient(0deg, $var-color-red 2px, white 5px);
         }
     }
@@ -426,8 +432,26 @@ a.link_slideshow{
 #coordenador{
     background: #e5f3ed;
     color: #848685;
-    h3{
-        color: $var-color-green;
+    h4{
         margin-bottom: 30px;
     }
+}
+
+.btn-action{
+    background: $var-color-green;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: inherit;
+    transition: 0.3s;
+    a{
+        color: white;
+        @extend %a;
+    }
+}
+.btn-action:hover{
+    background:$var-color-hardgreen;
 }

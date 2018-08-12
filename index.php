@@ -1,5 +1,3 @@
-
-
 <?php
   require('assets/template/header.php');
   require('assets/template/header-nav.php');
@@ -38,7 +36,7 @@
    <div class="container container-cursos">
       <div class="row">
          <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-            <h4 class="color-green">Cursos Presenciais</h4>
+            <h3 class="color-green">Cursos Presenciais</h3>
             <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit endrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de achacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
          </div>
@@ -53,7 +51,7 @@
                               <div class="card">
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
                                  <div class="card-body">
-                                    <h5>{{ item.fullname }}</h5>
+                                    <h6 class="color-green">{{ item.fullname }}</h6>
                                     <p class="card-text" v-html="item.descricao"></p>
                                  </div>
                               </div>
@@ -93,7 +91,7 @@
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
                                  </div>
                                  <div class="card-body">
-                                    <h5>{{ semiPresencial.fullname }}</h5>
+                                    <h6 class="color-green">{{ semiPresencial.fullname }}</h6>
                                     <p class="card-text" v-html="semiPresencial.descricao"></p>
                                  </div>
                               </div>
@@ -111,7 +109,7 @@
             <!-- -->
          </div>
          <div :class="['order-1 order-md-12 col-md-'+quantidadeRegistros.conteudo]">
-            <h4 class="color-green">Cursos SemiPresenciais</h4>
+            <h3 class="color-green">Cursos SemiPresenciais</h3>
             <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.
             </p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
@@ -129,7 +127,7 @@
    <div class="container container-cursos">
       <div class="row">
          <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-            <h4 class="color-green">Cursos a distância</h4>
+            <h3 class="color-green">Cursos a distância</h3>
             <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis imampola pa arma uma pindureta.
             </p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=1">Acessar</a>
@@ -146,7 +144,7 @@
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + ead.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
                                  </div>
                                  <div class="card-body">
-                                    <h5>{{ ead.fullname }}</h5>
+                                    <h6 class="color-green">{{ ead.fullname }}</h6>
                                     <p class="card-text" v-html="ead.descricao"></p>
                                  </div>
                               </div>
@@ -270,7 +268,7 @@
 <section class="container">
    <div class="row">
       <div class="col-md-12 pb-3 text-center">
-         <h4 class="color-green">Apoio</h4>
+         <h3 class="color-green">Apoio</h3>
       </div>
    </div>
    <div class="row">

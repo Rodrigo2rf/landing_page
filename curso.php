@@ -27,14 +27,15 @@
             <div class="row"> 
                 <div class="col-md-9">
                     
-                    <h2>{{ curso.fullname }}</h2>
+                    <h4 class="color-green">{{ curso.fullname }}</h4>
 
-                    <img :src="curso.img_capa_curso" class="col capa-curso">
+                    <img :src="curso.img_capa_curso" class="col capa-curso mb-15 ml-0">
 
                     <p v-html="curso.summary"></p>
                 </div>
                 <div class="col-md-3">
-                    <h2>INCLUSOS</h2>
+                    <h4 class="color-green">RESERVE SUA VAGA</h4>
+                    <button type="button" class="btn btn-action ">Reservar</button>
                 </div>
             </div>
         </div>
@@ -42,7 +43,7 @@
 
     <section v-if="curso.coordenador" id="coordenador" class="container-fluid container-cursos">  
         <div class="container">
-            <h3>Coordenador</h3>
+            <h4 class="color-green">Coordenador</h4>
             <p>{{ curso.coordenador }}</p>
         </div>
     </section>
