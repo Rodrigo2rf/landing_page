@@ -37,7 +37,7 @@
       <div class="row">
          <div :class="['col-md-'+quantidadeRegistros.conteudo]">
             <h3 class="color-green">Cursos Presenciais</h3>
-            <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit endrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de achacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
+            <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
          </div>
          <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
@@ -110,7 +110,7 @@
          </div>
          <div :class="['order-1 order-md-12 col-md-'+quantidadeRegistros.conteudo]">
             <h3 class="color-green">Cursos SemiPresenciais</h3>
-            <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.
+            <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.
             </p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
          </div>
@@ -128,7 +128,7 @@
       <div class="row">
          <div :class="['col-md-'+quantidadeRegistros.conteudo]">
             <h3 class="color-green">Cursos a distância</h3>
-            <p class="pt-2 pb-2">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí cumpadi! Per aumento de cachacis, eu reclamis. Cevadis imampola pa arma uma pindureta.
+            <p class="pt-2 pb-2">Professor e aluno não precisam se encontrar na mesma hora e local para que as aulas aconteçam.
             </p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=1">Acessar</a>
          </div>
@@ -178,7 +178,7 @@
             <v-layout wrap>
               <div class="col-md-6 col-sm-12 mb-2">
                   <h3 class="color-green text-left">Agenda</h3>
-                  <p class="text-left">Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si num tem leite então bota uma pinga aí umpadi! Per aumento de cachacis, eu reclamis. Cevadis im ampola pa arma uma pindureta.</p>
+                  <p class="text-left">Acompanhe o nosso calendário de cursos e eventos organizados pela Escola de Oncologia.</p>
                   <v-date-picker ref="picker" v-model="date" :picker-date.sync="pickerDate" full-width></v-date-picker>
               </div>
               <div class="col-md-6 col-sm-12">
@@ -248,7 +248,7 @@
    <div class="container">
       <div class="row">
          <div class="col-md-7 d-flex align-items-center">
-            <h3 class="color-white">"Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi." Si num</h3>
+            <h3 class="color-white">Ficou com alguma dúvida? Então entre em contato conosco.</h3>
          </div>
          <div class="col-md-5">
             <form class="formulario-contato-index">

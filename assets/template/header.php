@@ -28,7 +28,7 @@
         <script src="https://unpkg.com/vue-router"></script>
 
         <link rel="icon" href="assets/img/favicon.png">
-        <title>Moodle Liga</title>
+        <title>Escola de Oncologia</title>
   
     </head>
 <body>

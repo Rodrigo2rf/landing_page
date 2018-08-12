@@ -11,8 +11,8 @@
       <div class="row">
          <div class="col-md-3 info-endereco">
             <p><strong>Endereço</strong></p>
-            <p>Mussum Ipsum, cacilds vidis litro abertis. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit</p>
-            <p><strong>Fone: 55 (84) 9999 9999<br>contato@contato.com.br</strong></p>
+            <p>Av. Miguel Castro, 1355, Dix-Sept Rosado, Natal/RN, CEP: 59062-000</p>
+            <p><strong>Fone: 55 (84) 4009 5501<br>sec.depecom@liga.org.br</strong></p>
          </div>
          <div class="col d-none d-md-block offset-md-1">
             <p><strong><a href="<?=url_index?>">Home</a></strong></p>

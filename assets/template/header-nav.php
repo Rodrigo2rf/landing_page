@@ -22,7 +22,7 @@
     <!-- Barra contato -->
 <div id="topo" class="container-fluid barra-contato text-white d-flex align-items-center">
     <div class="container text-right">
-    Fone 55 (84) 9999 9999 | contato@contato.com.br
+    Fone 55 (84) 4009 5501 | sec.depecom@liga.org.br
     </div>
 </div>
 
