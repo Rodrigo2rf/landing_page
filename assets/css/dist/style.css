@@ -62,7 +62,7 @@ section { padding: 80px 0px; }
 .container-cursos ul.lista-cursos { text-align: center; width: 10000em; position: relative; list-style: none; margin: 0; padding: 0; }
 .container-cursos ul.lista-cursos h6 { margin-bottom: 30px; }
 .container-cursos ul.lista-cursos .card-img { height: 75px; background-position: center; border-radius: 50%; width: 75px; margin: auto; }
-.container-cursos ul.lista-cursos .card { border-radius: initial; border: 1px solid #00874b; }
+.container-cursos ul.lista-cursos .card { border-radius: initial; border: 1px solid #00874b; min-height: 330px; }
 .container-cursos ul.lista-cursos li { width: 275px; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .container-cursos ul.lista-cursos li p { flex: 1 0 auto; }
 .container-cursos ul.lista-cursos li a { color: #212529; text-decoration: none; }
@@ -112,6 +112,8 @@ section { padding: 80px 0px; }
 @media (max-width: 992px) { .barra-menu { display: none !important; }
   .menu-mobile { display: block !important; }
   .container-rodape .copyright { text-align: center; } }
+@media (max-width: 440px) { .barra-pesquisar { width: 80%; }
+  .barra-pesquisar input[type="text"] { width: 100%; } }
 a.link_slideshow { width: 100%; height: 100%; display: block; }
 
 .not-display { display: none; }

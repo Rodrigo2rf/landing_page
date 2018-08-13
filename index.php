@@ -208,10 +208,10 @@
 <section id="comentarios-alunos" class="container-fluid">
    <div class="container container-cursos">
       <div class="col">
-         <h3 class="color-green text-center">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
+         <h3 class="color-green text-center pb-3">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
       </div>
       <div class="row">
-         <div class="col-md-12">
+        <div v-if="quantidadeRegistros > 0" class="col-md-12">
             <!-- Carousel -->
             <div class="wrapper">
                <div class="jcarousel-wrapper">
@@ -235,7 +235,10 @@
                </div>
             </div>
             <!-- -->
-         </div>
+        </div>
+        <div v-if="quantidadeRegistros < 1" class="col-md-12">
+          <p class="text-danger">Nenhum depoimento encontrato!</p>
+        </div>
       </div>
    </div>
 </section>

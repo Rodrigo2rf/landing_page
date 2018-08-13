@@ -8,8 +8,8 @@
 <div id="curso">
 
     <section id="info-cursos" class="container-fluid"> 
-        <div class="row justify-content-md-center">
-            <div class="col col-lg-6 card-informacoes-curso">
+        <div class="row justify-content-center">
+            <div class="col-11 col-lg-7 col-sm-10 card-informacoes-curso">
                 <div class="row text-center">
                     <div class="col"><span>{{ curso.dia }}</span> <br> {{ curso.mes }}</div>
                     <div class="col"><span>{{ curso.horas }}</span> <br> HORAS/AULA</div>
@@ -21,7 +21,7 @@
 
     <section class="container container-cursos">        
         <div v-if="!exite" color="error">
-            Curso não encontrado.
+            <p class="text-danger">Nenhum curso encontrado!</p>
         </div>
         <div v-if="exite">
             <div class="row"> 

@@ -25,7 +25,7 @@
         <a href="<?=url_redirect_semipresencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 3){ echo 'ativo'; }?>">
             Cursos<br>Semipresenciais
         </a>
-        <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 1){ echo 'ativo'; }?>"> 
+        <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 4){ echo 'ativo'; }?>"> 
             Cursos<br>online / EAD
         </a> 
     </div>
@@ -36,7 +36,7 @@
     <div class="container container-cursos">
      
         <div v-if="!showList" color="error">
-            Nenhum curso encontrado.
+            <p class="text-danger">Nenhum curso encontrado!</p>
         </div>
         <div v-if="showList"> 
             <div class="row">

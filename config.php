@@ -16,7 +16,7 @@
 
     define("url_redirect_presencial", url_cursos."?q=2#trocar-modalidade");
     define("url_redirect_semipresencial", url_cursos."?q=3#trocar-modalidade");
-    define("url_redirect_ead", url_cursos."?q=1#trocar-modalidade");   
+    define("url_redirect_ead", url_cursos."?q=4#trocar-modalidade");   
     define("url_moodle", url_site."/moodle");
 
 ?>
