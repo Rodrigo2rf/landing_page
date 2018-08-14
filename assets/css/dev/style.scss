@@ -235,6 +235,9 @@ section{
             a .card:hover { border: 1px solid #abdbc7; -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; -moz-box-shadow: 0px 0px 12px -1px #abdbc7; box-shadow: 0px 0px 12px -1px #abdbc7; }
         }
     }
+    .visible-only-xs,  .visible-smaller-lg{
+        display: none;
+    }
     .capa-curso{
         margin: 10px 0px;
         max-width: 400px;
@@ -400,6 +403,10 @@ section{
     .container-rodape .copyright{
         text-align: center;
     }
+    .container-cursos
+    .visible-smaller-lg{
+        display: block;
+    }
 }
 
 @media (max-width: 440px){
@@ -408,6 +415,13 @@ section{
         input[type="text"]{
             width: 100%;
         }
+    }
+}
+
+@media (max-width: 409px){
+    .container-cursos
+    .visible-only-xs{
+        display: block;
     }
 }
 

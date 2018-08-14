@@ -59,10 +59,20 @@
                         </li>
                      </ul>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd > 3">
+                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
+                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                     <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <p class="jcarousel-pagination"></p>
                   </div>
                </div>
             </div>
@@ -99,10 +109,20 @@
                         </li>
                      </ul>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd > 3">
+                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
+                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                     <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <p class="jcarousel-pagination"></p>
                   </div>
                </div>
             </div>
@@ -153,11 +173,21 @@
                      </ul>
                   </div>
                   <div>
-                     <div v-if="quantidadeRegistros.qtd > 3">
-                        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                        <p class="jcarousel-pagination"></p>
-                     </div>
+                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
+                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                     <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
+                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                     <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <p class="jcarousel-pagination"></p>
+                  </div>
                   </div>
                </div>
             </div>
@@ -227,10 +257,20 @@
                         </li>
                      </ul>
                   </div>
-                  <div v-if="quantidadeRegistros > 3">
+                  <div v-if="quantidadeRegistros >= 4" class="d-block">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros == 3" class="visible-smaller-lg">
+                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                     <p class="jcarousel-pagination"></p>
+                  </div>
+                  <div v-if="quantidadeRegistros == 2" class="visible-only-xs">
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <p class="jcarousel-pagination"></p>
                   </div>
                </div>
             </div>
