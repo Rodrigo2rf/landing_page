@@ -4,7 +4,7 @@
 ?>
 
 <!-- SLIDER --> 
-<header id="showcase_landing_page">
+<!-- <header id="showcase_landing_page">
    <div class="barra-pesquisar d-none d-sm-block">
      <form action="cursos.php" method="get">
        <input name="c" type="text">
@@ -29,24 +29,26 @@
        <span class="sr-only">Next</span>
      </a>
    </div>
-   </header> 
+   </header>  -->
 
-<!-- PRESENCIAL -->
-<section id="lista-cursos-presenciais" class="container-fluid bg-white">
-   <div class="container container-cursos">
+<!-- EXIBICAO DE CURSOS -->
+<div id="sessoes">
+  
+  <!-- -->
+  <section class="container-fluid bg-white">
+    <div class="container container-cursos">
       <div class="row">
-         <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-            <h3 class="color-green">Cursos Presenciais</h3>
+         <div :class="['col-md-'+qtdCursos.conteudo]">
+            <h3 class="color-green">Cursos</h3>
             <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
             <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
          </div>
-         <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
-            <!-- Carousel -->
+         <div :class="['col-md-'+qtdCursos.todosCursos]" v-if="qtdCursos.conteudo < 12">
             <div class="wrapper">
                <div class="jcarousel-wrapper">
                   <div class="jcarousel">
                      <ul class="lista-cursos">
-                        <li v-for="item in listCursosPresenciais" class="col-md-4 pt-2 pb-2">
+                        <li v-for="item in cursos" class="col-md-4 pt-2 pb-2">
                            <a :href="'/landing_page/curso.php?q=' + item.id">
                               <div class="card">
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
@@ -59,145 +61,132 @@
                         </li>
                      </ul>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
+                  <div v-if="qtdCursos.qtd >= 4" class="d-block">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
+                  <div v-if="qtdCursos.qtd == 3" class="visible-smaller-lg">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
+                  <div v-if="qtdCursos.qtd == 2" class="visible-only-xs">
                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                     <p class="jcarousel-pagination"></p>
                   </div>
                </div>
             </div>
-            <!-- -->
-         </div>
-      </div>
-   </div>
-</section>
-<!-- -->
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- -->
 
 
-
-<!-- SEMI-PRESENCIAL -->
-<section id="lista-cursos-semi-presenciais" class="container-fluid bg-soft-blue">
-   <div class="container container-cursos">
+  <!-- RESIDENCIAS -->
+  <section class="container-fluid bg-soft-blue">
+    <div class="container container-cursos">
       <div class="row">
-         <div :class="['order-2 col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
-            <!-- Carousel -->
+        <div :class="['order-2 col-md-'+qtdResidencias.todosResidencias]" v-if="qtdResidencias.conteudo < 12">      
+          <div class="wrapper">
+            <div class="jcarousel-wrapper">
+              <div class="jcarousel">
+                <ul class="lista-cursos">
+                  <li v-for="residencia in residencias"  class="col-md-4 pt-2 pb-2">
+                    <a :href="'/landing_page/curso.php?q=' + residencia.id">
+                      <div class="card">
+                        <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + residencia.img_capa_curso + ')' }"></div>
+                        <div class="card-body">
+                          <h6 class="color-green">{{ residencia.fullname }}</h6>
+                          <p class="card-text" v-html="residencia.descricao"></p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div v-if="qtdResidencias.qtd >= 4" class="d-block">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+              <div v-if="qtdResidencias.qtd == 3" class="visible-smaller-lg">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+              <div v-if="qtdResidencias.qtd == 2" class="visible-only-xs">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+            </div>
+          </div>    
+        </div>
+        <div :class="['order-1 order-md-12 col-md-'+qtdResidencias.conteudo]">
+        <h3 class="color-green">Residência</h3>
+            <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
+          <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- -->
+
+
+  <!-- EVENTOS -->
+  <section class="container-fluid bg-white">
+    <div class="container container-cursos">
+      <div class="row">
+         <div :class="['col-md-'+qtdEventos.conteudo]">
+            <h3 class="color-green">Eventos</h3>
+            <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.</p>
+            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
+         </div>
+         <div :class="['col-md-'+qtdEventos.todosEventos]" v-if="qtdEventos.conteudo < 12">
             <div class="wrapper">
                <div class="jcarousel-wrapper">
                   <div class="jcarousel">
                      <ul class="lista-cursos">
-                        <li v-for="semiPresencial in listCursosSemiPresenciais"  class="col-md-4 pt-2 pb-2">
-                           <a :href="'/landing_page/curso.php?q=' + semiPresencial.id">
+                        <li v-for="evento in eventos" class="col-md-4 pt-2 pb-2">
+                           <a :href="'/landing_page/curso.php?q=' + evento.id">
                               <div class="card">
-                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + semiPresencial.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
-                                 </div>
+                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + evento.img_capa_curso + ')' }"></div>
                                  <div class="card-body">
-                                    <h6 class="color-green">{{ semiPresencial.fullname }}</h6>
-                                    <p class="card-text" v-html="semiPresencial.descricao"></p>
+                                    <h6 class="color-green">{{ evento.fullname }}</h6>
+                                    <p class="card-text" v-html="evento.descricao"></p>
                                  </div>
                               </div>
                            </a>
                         </li>
                      </ul>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
+                  <div v-if="qtdEventos.qtd >= 4" class="d-block">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
+                  <div v-if="qtdEventos.qtd == 3" class="visible-smaller-lg">
                      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                      <p class="jcarousel-pagination"></p>
                   </div>
-                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
+                  <div v-if="qtdEventos.qtd == 2" class="visible-only-xs">
                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
                     <p class="jcarousel-pagination"></p>
                   </div>
                </div>
             </div>
-            <!-- -->
-         </div>
-         <div :class="['order-1 order-md-12 col-md-'+quantidadeRegistros.conteudo]">
-            <h3 class="color-green">Cursos SemiPresenciais</h3>
-            <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.
-            </p>
-            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
-         </div>
-      </div>
-   </div>
-</section>
-<!-- -->
-
-
-
-
-<!-- EAD -->
-<section id="lista-cursos-ead" class="container-fluid bg-white">
-   <div class="container container-cursos">
-      <div class="row">
-         <div :class="['col-md-'+quantidadeRegistros.conteudo]">
-            <h3 class="color-green">Cursos a distância</h3>
-            <p class="pt-2 pb-2">Professor e aluno não precisam se encontrar na mesma hora e local para que as aulas aconteçam.
-            </p>
-            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=1">Acessar</a>
-         </div>
-         <div :class="['col-md-'+quantidadeRegistros.cursos]" v-if="quantidadeRegistros.conteudo < 12">
-            <!-- Carousel -->
-            <div class="wrapper">
-               <div class="jcarousel-wrapper">
-                  <div class="jcarousel">
-                     <ul  class="lista-cursos">
-                        <li v-for="ead in listCursosEAD"  class="col-md-4 pt-2 pb-2">
-                           <a :href="'/landing_page/curso.php?q=' + ead.id">
-                              <div class="card">
-                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + ead.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867 )' } ">
-                                 </div>
-                                 <div class="card-body">
-                                    <h6 class="color-green">{{ ead.fullname }}</h6>
-                                    <p class="card-text" v-html="ead.descricao"></p>
-                                 </div>
-                              </div>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-                  <div>
-                  <div v-if="quantidadeRegistros.qtd >= 4" class="d-block">
-                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                     <p class="jcarousel-pagination"></p>
-                  </div>
-                  <div v-if="quantidadeRegistros.qtd == 3" class="visible-smaller-lg">
-                     <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                     <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                     <p class="jcarousel-pagination"></p>
-                  </div>
-                  <div v-if="quantidadeRegistros.qtd == 2" class="visible-only-xs">
-                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                    <p class="jcarousel-pagination"></p>
-                  </div>
-                  </div>
-               </div>
-            </div>
-            <!-- -->
-         </div>
-      </div>
-   </div>
-</section>
-<!-- -->
-
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- -->
+  
+</div>
 
 
 <!-- calendario -->
@@ -235,14 +224,15 @@
 
 
 <!-- Depoimento alunos -->
-<section id="comentarios-alunos" class="container-fluid">
+<!-- <section id="comentarios-alunos" class="container-fluid">
    <div class="container container-cursos">
       <div class="col">
          <h3 class="color-green text-center pb-3">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
       </div>
       <div class="row">
         <div v-if="quantidadeRegistros > 0" class="col-md-12">
-            <!-- Carousel -->
+          
+          
             <div class="wrapper">
                <div class="jcarousel-wrapper">
                   <div class="jcarousel">
@@ -274,34 +264,35 @@
                   </div>
                </div>
             </div>
-            <!-- -->
+            
+
         </div>
         <div v-if="quantidadeRegistros < 1" class="col-md-12">
           <p class="text-danger">Nenhum depoimento encontrato!</p>
         </div>
       </div>
    </div>
-</section>
+</section> -->
 <!-- -->
 
 
 
 <!-- Formulario contato sugestao -->
 <section id="contato" class="container-fluid parallax">
-   <div class="container">
-      <div class="row">
-         <div class="col-md-7 d-flex align-items-center">
-            <h3 class="color-white">Ficou com alguma dúvida? Então entre em contato conosco.</h3>
-         </div>
-         <div class="col-md-5">
-            <form class="formulario-contato-index">
-               <textarea placeholder="Mensagem"></textarea>
-               <input type="text" placeholder="Email">
-               <button class="btn btn-liga btn-type-2 float-md-right" type="submit">Enviar</button>
-            </form>
-         </div>
+  <div class="container"> 
+    <div class="row">
+      <div class="col-md-7 d-flex align-items-center">
+        <h3 class="color-white">Ficou com alguma dúvida? Então entre em contato conosco.</h3>
       </div>
-   </div>
+      <div class="col-md-5">
+        <form class="formulario-contato-index">
+          <textarea placeholder="Mensagem"></textarea>
+          <input type="text" placeholder="Email">
+          <button class="btn btn-liga btn-type-2 float-md-right" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- -->
 

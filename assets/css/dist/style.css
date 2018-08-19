@@ -46,7 +46,8 @@ header .barra-pesquisar { z-index: 999; position: absolute; }
 .barra-menu .menu-horizontal a { line-height: 80px; color: #707070; }
 .barra-menu .menu-horizontal.no-gutters a:hover { border-bottom: 4px solid #c3281e; }
 
-.icons-redes-sociais img { width: 18px; margin: 0px 4px; }
+.icons-redes-sociais { font-size: 0px; }
+.icons-redes-sociais img { width: 18px; }
 
 .container-rodape { background: #00874b; color: #fff; }
 .container-rodape .info-endereco { border-left: 1px solid #fff; }

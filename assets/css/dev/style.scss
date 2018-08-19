@@ -171,9 +171,11 @@ header{
     }
 }
 
-.icons-redes-sociais img{
-    width: 18px;
-    margin: 0px 4px;
+.icons-redes-sociais{
+    font-size: 0px;
+    img{
+        width: 18px;
+    }
 }
 
 .container-rodape{

@@ -11,11 +11,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
       
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/dist/bootstrap.min.css">
+        <link rel="stylesheet" href="<?=url_index?>/assets/css/dist/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"> -->
-
-        <link rel="stylesheet" href="assets/css/dist/calendar-vuetify.min.css"> 
+        <link rel="stylesheet" href="<?=url_index?>/assets/css/dist/calendar-vuetify.min.css"> 
         <!-- Custom styles for this template -->
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
