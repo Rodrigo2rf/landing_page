@@ -133,4 +133,11 @@ a.link_slideshow { width: 100%; height: 100%; display: block; }
 
 .btn-action:hover { background: #005e34; }
 
+.sub-menu-filtro ul { font-size: 0px; margin: auto; }
+.sub-menu-filtro ul li { list-style-type: none; display: inline; }
+.sub-menu-filtro ul li .active { border-bottom: 3px solid red; }
+.sub-menu-filtro ul li .border-right { border-right: 1px solid red; }
+.sub-menu-filtro ul li a { color: #707070; font-size: 15px; line-height: 14px; }
+.sub-menu-filtro ul li a:hover { text-decoration: none; }
+
 /*# sourceMappingURL=style.css.map */

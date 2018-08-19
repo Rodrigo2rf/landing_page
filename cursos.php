@@ -17,13 +17,13 @@
             <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
         </div>
         <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
-            <a href="<?=url_cur_tecnico?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 7){ echo 'ativo'; }?>">
+            <a href="<?=url_cur_tecnico?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 7 && $id_cursos <= 9){ echo 'ativo'; }?>">
                 Cursos<br>Técnicos
             </a>
-            <a href="<?=url_cur_posgraduacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 10){ echo 'ativo'; }?>">
+            <a href="<?=url_cur_posgraduacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 10 && $id_cursos <= 12){ echo 'ativo'; }?>">
                 Cursos<br>Pós-Graduação
             </a>
-            <a href="<?=url_cur_atualizacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 13){ echo 'ativo'; }?>"> 
+            <a href="<?=url_cur_atualizacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 13 && $id_cursos <= 15){ echo 'ativo'; }?>"> 
                 Cursos<br>Atualização
             </a> 
         </div>
@@ -35,6 +35,13 @@
                 <p class="text-danger">Nenhum curso encontrado!</p>
             </div>
             <div v-if="showList"> 
+                <div class="row sub-menu-filtro">
+                    <ul class="p-0 mb-4">
+                        <li class="ml-3 mr-3 br"><a href="">Todos</a></li>
+                        <li class="ml-3 mr-3 br"><a href="">Presencial</a></li>
+                        <li class="ml-3 mr-3"><a href="">À Distância</a></li>
+                    </ul>
+                </div>
                 <div class="row">
                     <ul class="lista-cursos">
                         <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" v-if="curso.id != 1" class="col-sm-6 col-md-3 pt-2 pb-4">

@@ -480,3 +480,26 @@ a.link_slideshow{
 .btn-action:hover{
     background:$var-color-hardgreen;
 }
+
+.sub-menu-filtro ul{    
+    font-size: 0px;
+    margin: auto;
+    li{
+        .active{
+            border-bottom: 3px solid red;
+        }
+        .border-right{
+            border-right: 1px solid red;
+        }
+        list-style-type: none;
+        display: inline;
+        a{
+            color: $var-color-gray;
+            font-size: 15px;
+            line-height: 14px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+}
