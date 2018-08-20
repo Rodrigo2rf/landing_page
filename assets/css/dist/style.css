@@ -74,7 +74,7 @@ section { padding: 80px 0px; }
 /* Pagina com todos os cursos 'saiba-mais' */
 #info-cursos { background-image: url("../../img/student.jpg"); background-size: cover; background-repeat: no-repeat; background-position: center center; background-color: #00874b; position: relative; min-height: 370px; }
 #info-cursos .menu-de-cursos { position: relative; bottom: -125px; }
-#info-cursos .menu-de-cursos a.link-menu-de-cursos { background: white; padding: 25px 0px; border: 1px solid #d2d2d2; color: #00874b; }
+#info-cursos .menu-de-cursos a.link-menu-de-cursos { background: white; padding: 25px 0px; border: 1px solid #d2d2d2; color: #00874b; font-size: 16px; }
 #info-cursos .menu-de-cursos a.link-menu-de-cursos:hover, #info-cursos .menu-de-cursos a.link-menu-de-cursos.ativo { text-decoration: none; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; border-bottom: 1px solid #c3281e; color: #c3281e; background: linear-gradient(0deg, #c3281e 2px, white 5px); }
 
 #calendario .eventos-calendario { list-style-type: none; min-width: 100%; background: white; margin-bottom: 10px; border: 1px solid #00874b; display: inherit; height: auto; overflow: hidden; padding-top: 15px; }
@@ -133,11 +133,11 @@ a.link_slideshow { width: 100%; height: 100%; display: block; }
 
 .btn-action:hover { background: #005e34; }
 
-.sub-menu-filtro ul { font-size: 0px; margin: auto; }
-.sub-menu-filtro ul li { list-style-type: none; display: inline; }
-.sub-menu-filtro ul li .active { border-bottom: 3px solid red; }
-.sub-menu-filtro ul li .border-right { border-right: 1px solid red; }
-.sub-menu-filtro ul li a { color: #707070; font-size: 15px; line-height: 14px; }
-.sub-menu-filtro ul li a:hover { text-decoration: none; }
+#navigation { text-align: center; margin-bottom: 15px; }
+#navigation ul { margin: 0; padding: 0; }
+#navigation ul li { list-style-type: none; display: inline; line-height: 15px; }
+#navigation ul li a { color: #707070; padding-bottom: 3px; }
+#navigation ul li a:hover { text-decoration: none; border-bottom: 3px solid #c3281e; }
+#navigation ul li:not(:first-child):before { content: " | "; margin-left: 15px; margin-right: 15px; }
 
 /*# sourceMappingURL=style.css.map */

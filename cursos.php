@@ -4,6 +4,9 @@
 
     if(isset($_GET['categoryid'])){ 
         $id_cursos = $_GET['categoryid']; 
+        if( $id_cursos >= 7 && $id_cursos <= 9 ){ $id_categoria_busca = 7; }
+        if( $id_cursos >= 10 && $id_cursos <= 12 ){ $id_categoria_busca = 10; }
+        if( $id_cursos >= 13 && $id_cursos <= 15 ){ $id_categoria_busca = 13; }
     }
 ?>
 
@@ -35,13 +38,17 @@
                 <p class="text-danger">Nenhum curso encontrado!</p>
             </div>
             <div v-if="showList"> 
-                <div class="row sub-menu-filtro">
-                    <ul class="p-0 mb-4">
-                        <li class="ml-3 mr-3 br"><a href="">Todos</a></li>
-                        <li class="ml-3 mr-3 br"><a href="">Presencial</a></li>
-                        <li class="ml-3 mr-3"><a href="">À Distância</a></li>
+
+                <?php   if($id_cursos > 6){ ?>
+                <div id="navigation">
+                    <ul>
+                        <li @click.prevent="getCursos(<?=$id_categoria_busca?>)"><a href="">Todos</a></li>
+                        <li @click.prevent="getCursos(<?=$id_categoria_busca + 1?>)"><a href="">Presencial</a></li>
+                        <li @click.prevent="getCursos(<?=$id_categoria_busca + 2?>)"><a href="">À Distância</a></li>
                     </ul>
                 </div>
+                <?php   }   ?>
+
                 <div class="row">
                     <ul class="lista-cursos">
                         <li v-for="(curso, index) in filteredRows.slice(pageStart, pageStart + countOfPage)" v-if="curso.id != 1" class="col-sm-6 col-md-3 pt-2 pb-4">
