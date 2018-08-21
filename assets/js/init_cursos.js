@@ -34,6 +34,7 @@ var app = new Vue({
     },
     watch: {
         rows: function () {
+            this.cursos = [];
             for(var i=0; i < this.rows.length; i++){
                 if( categoryid == 6 ){
                     if( this.rows[i].categoryid >= 6 && this.rows[i].categoryid <= 15 ){
@@ -128,25 +129,24 @@ var app = new Vue({
             this.currPage = idx;
         },
         getCursos: function( categoryid ){
-            this.categoryid = categoryid;
-            return axios
-                .get('http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+categoryid+'&moodlewsrestformat=json')
+            this.init( categoryid );
+        },
+        init: function( categoryid ){
+            if ( categoryid == 6 || categoryid == 7 || categoryid == 10 || categoryid == 13 || categoryid == null ){ 
+                url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
+            } else if ( categoryid == 8 || categoryid == 9 || categoryid == 11 || categoryid == 12 || categoryid == 14 || categoryid == 15  ){ 
+                url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+categoryid+'&moodlewsrestformat=json';
+            }else{
+                url = "";
+            }
+            axios
+                .get(url)
                 .then(response => ( this.rows = response.data.courses ))
-                .finally(() => this.loading = true)
+                .finally(() => this.loading = true);
         }
     },
-    mounted () {    
+    created: function () {
         categoryid = this.$route.query.categoryid; 
-        if ( categoryid == 6 || categoryid == 7 || categoryid == 10 || categoryid == 13 || categoryid == null ){ 
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
-        } else if ( categoryid == 8 || categoryid == 9 || categoryid == 11 || categoryid == 12 || categoryid == 14 || categoryid == 15  ){ 
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&field=category&value='+categoryid+'&moodlewsrestformat=json';
-        }else{
-            url = "";
-        }
-        axios
-            .get(url)
-            .then(response => ( this.rows = response.data.courses ))
-            .finally(() => this.loading = true);
-    }
+        this.init( categoryid );
+    }  
 });
