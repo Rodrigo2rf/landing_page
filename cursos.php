@@ -1,4 +1,5 @@
 <?php
+    
     require('assets/template/header.php');
     require('assets/template/header-nav.php');
 
@@ -8,9 +9,11 @@
         if( $id_cursos >= 10 && $id_cursos <= 12 ){ $id_categoria_busca = 10; }
         if( $id_cursos >= 13 && $id_cursos <= 15 ){ $id_categoria_busca = 13; }
     }
+
 ?>
 
 <div id="app">
+
     <section id="info-cursos" class="container-fluid">
         <div class="offset-md-2 col-md-8 mb-5">
             <h2 class="text-light mb-5">Escola de Oncologia</h2>
@@ -70,10 +73,13 @@
             </div>
         </div>
     </section>
+
 </div>
 
 <?php
+
     require('assets/template/footer-nav.php');
     require('assets/template/footer-script-cursos.php');
     require('assets/template/footer.php');
+
 ?>

@@ -1,6 +1,7 @@
 <?php
     require_once "config.php";
 ?>
+
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -25,7 +26,7 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
         <script src="https://unpkg.com/vue-router"></script>
 
-        <link rel="icon" href="assets/img/favicon.png">
+        <link rel="icon" href="<?=url_index?>/assets/img/favicon.png">
         <title>Escola de Oncologia</title>
   
     </head>

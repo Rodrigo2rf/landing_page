@@ -23,8 +23,8 @@
                 });
                 
                 setTimeout( function(){                
-                    $.getScript('assets/js/jquery.jcarousel.min.js');
-                    $.getScript('assets/js/jcarousel.responsive.js');
+                    $.getScript('../assets/js/jquery.jcarousel.min.js');
+                    $.getScript('../assets/js/jcarousel.responsive.js');
                     
                     var inicial = 1;
                     var gatilho = 0;

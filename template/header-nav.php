@@ -30,7 +30,7 @@
     <div class="container">
 <a class="menu-link" href="#menu"><i class="material-icons">menu</i></a>
 <a href="<?=url_index?>">
-<img src="assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
+<img src="<?=url_index?>/assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
 </div>
 </div>
 
@@ -39,7 +39,7 @@
     <div class="container">
     <div class="row text-center">
         <div class="col-md-2 d-flex align-items-center text-left">
-            <a href="<?=url_site?>"><img src="assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
+            <a href="<?=url_site?>"><img src="<?=url_index?>/assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
         </div>
         <div class="col-md-10">
             <div class="col-md-1 bt-login no-gutters float-right">
@@ -48,13 +48,13 @@
             <div class="menu-horizontal float-right">
                 <ul class="list-inline icons-redes-sociais text-center">
                     <li class="list-inline-item m-0">
-                        <a href="#"><img class="ml-3" src="assets/img/icones_redes_sociais/facebook_gray.svg"></a>
+                        <a href="#"><img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/facebook_gray.svg"></a>
                     </li>
                     <li class="list-inline-item m-0">
-                        <a href="#"><img class="ml-3" src="assets/img/icones_redes_sociais/instagram_gray.svg"></a>
+                        <a href="#"><img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/instagram_gray.svg"></a>
                     </li>
                     <li class="list-inline-item m-0">
-                        <a href="#"><img class="ml-3 mr-3" src="assets/img/icones_redes_sociais/twitter_gray.svg"></a>
+                        <a href="#"><img class="ml-3 mr-3" src="<?=url_index?>/assets/img/icones_redes_sociais/twitter_gray.svg"></a>
                     </li>
                 </ul>
             </div>
