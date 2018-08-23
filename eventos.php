@@ -4,10 +4,7 @@
     require('template/header-nav.php');
 
     if(isset($_GET['categoryid'])){ 
-        $id_cursos = $_GET['categoryid']; 
-        if( $id_cursos >= 7 && $id_cursos <= 9 ){ $id_categoria_busca = 7; }
-        if( $id_cursos >= 10 && $id_cursos <= 12 ){ $id_categoria_busca = 10; }
-        if( $id_cursos >= 13 && $id_cursos <= 15 ){ $id_categoria_busca = 13; }
+        $id_cursos = $_GET['categoryid'];
     }
 
 ?>

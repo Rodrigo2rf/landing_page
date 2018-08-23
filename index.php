@@ -1,10 +1,10 @@
 <?php
-  require('assets/template/header.php');
-  require('assets/template/header-nav.php');
+    require('template/header.php');
+    require('template/header-nav.php');
 ?>
 
 <!-- SLIDER --> 
-<!-- <header id="showcase_landing_page">
+<header id="showcase_landing_page">
    <div class="barra-pesquisar d-none d-sm-block">
      <form action="cursos.php" method="get">
        <input name="c" type="text">
@@ -29,7 +29,7 @@
        <span class="sr-only">Next</span>
      </a>
    </div>
-   </header>  -->
+</header>
 
 <!-- EXIBICAO DE CURSOS -->
 <div id="sessoes">
@@ -196,7 +196,7 @@
         <v-app id="inspire">
             <v-layout wrap>
               <div class="col-md-6 col-sm-12 mb-2">
-                  <h3 class="color-green text-left">Agenda</h3>
+                  <h3 class="color-green text-left">Calendário</h3>
                   <p class="text-left">Acompanhe o nosso calendário de cursos e eventos organizados pela Escola de Oncologia.</p>
                   <v-date-picker ref="picker" v-model="date" :picker-date.sync="pickerDate" full-width></v-date-picker>
               </div>
@@ -224,7 +224,7 @@
 
 
 <!-- Depoimento alunos -->
-<!-- <section id="comentarios-alunos" class="container-fluid">
+<section id="comentarios-alunos" class="container-fluid">
    <div class="container container-cursos">
       <div class="col">
          <h3 class="color-green text-center pb-3">DEPOIMENTOS DE NOSSOS ALUNOS</h3>
@@ -272,7 +272,7 @@
         </div>
       </div>
    </div>
-</section> -->
+</section>
 <!-- -->
 
 
@@ -330,7 +330,7 @@
 <!-- -->
 
 <?php
-  require('assets/template/footer-nav.php');
-  require('assets/template/footer-script-type-a.php');
-  require('assets/template/footer.php');
+  require('template/footer-nav.php');
+  require('template/footer-script-index.php');
+  require('template/footer.php');
 ?>

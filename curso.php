@@ -1,7 +1,7 @@
 <?php
   
-  require('assets/template/header.php');
-  require('assets/template/header-nav.php');
+  require('template/header.php');
+  require('template/header-nav.php');
 
 ?>
 
@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-3">
                     <h4 class="color-green">RESERVE SUA VAGA</h4>
-                    <button type="button" class="btn btn-action ">Reservar</button>
+                    <a :href="curso.link_inscricao" type="button" class="btn btn-action ">Reservar</a>
                 </div>
             </div>
         </div>
@@ -52,8 +52,8 @@
 
 <?php
 
-    require('assets/template/footer-nav.php');
-    require('assets/template/footer-script-type-c.php');
-    require('assets/template/footer.php');
+    require('template/footer-nav.php');
+    require('template/footer-script-curso.php');
+    require('template/footer.php');
 
 ?>

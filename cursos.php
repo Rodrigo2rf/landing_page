@@ -1,7 +1,7 @@
 <?php
     
-    require('assets/template/header.php');
-    require('assets/template/header-nav.php');
+    require('template/header.php');
+    require('template/header-nav.php');
 
     if(isset($_GET['categoryid'])){ 
         $id_cursos = $_GET['categoryid']; 
@@ -78,8 +78,8 @@
 
 <?php
 
-    require('assets/template/footer-nav.php');
-    require('assets/template/footer-script-cursos.php');
-    require('assets/template/footer.php');
+    require('template/footer-nav.php');
+    require('template/footer-script-cursos.php');
+    require('template/footer.php');
 
 ?>

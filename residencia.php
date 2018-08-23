@@ -1,13 +1,10 @@
 <?php
     
-    require('assets/template/header.php');
-    require('assets/template/header-nav.php');
+    require('template/header.php');
+    require('template/header-nav.php');
 
     if(isset($_GET['categoryid'])){ 
         $id_cursos = $_GET['categoryid']; 
-        if( $id_cursos >= 7 && $id_cursos <= 9 ){ $id_categoria_busca = 7; }
-        if( $id_cursos >= 10 && $id_cursos <= 12 ){ $id_categoria_busca = 10; }
-        if( $id_cursos >= 13 && $id_cursos <= 15 ){ $id_categoria_busca = 13; }
     }
 
 ?>
@@ -23,9 +20,8 @@
             <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
         </div>
         <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
-            <a href="<?=url_redirect_presencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 2){ echo 'ativo'; }?>">Cursos<br>Presenciais</a>
-            <a href="<?=url_redirect_semipresencial?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 3){ echo 'ativo'; }?>">Cursos<br>Semipresenciais</a>
-            <a href="<?=url_redirect_ead?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 4){ echo 'ativo'; }?>">Cursos<br>online / EAD</a> 
+            <a href="<?=url_res_medica?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 17){ echo 'ativo'; }?>">Residência<br>Médica</a>
+            <a href="<?=url_res_multidisciplinar?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 18){ echo 'ativo'; }?>">Residência<br>Multidisciplinar</a> 
         </div>
     </section>
 
@@ -65,8 +61,8 @@
 
 <?php
   
-    require('assets/template/footer-nav.php');
-    require('assets/template/footer-script-type-b.php');
-    require('assets/template/footer.php');
+    require('template/footer-nav.php');
+    require('template/footer-script-residencia.php');
+    require('template/footer.php');
 
 ?>

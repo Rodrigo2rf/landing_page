@@ -32,25 +32,49 @@ var app = new Vue({
             }
             
             // recuperando itens
-            p_start = this.curso.summary.indexOf("data-preco") + 12;
+            p_start = this.curso.summary.indexOf("dt-preco") + 10;
             p_end = this.curso.summary.indexOf("</p>", p_start);
             this.curso.preco = this.curso.summary.substring(p_start, p_end);
 
-            h_start = this.curso.summary.indexOf("data-horas") + 12;
+            h_start = this.curso.summary.indexOf("dt-horas") + 10;
             h_end = this.curso.summary.indexOf("</p>", h_start);
             this.curso.horas = this.curso.summary.substring(h_start, h_end);
 
-            c_start = this.curso.summary.indexOf("data-coordenador") + 18;
+            c_start = this.curso.summary.indexOf("dt-coordenador") + 16;
             c_end = this.curso.summary.indexOf("</p>", c_start);
             this.curso.coordenador = this.curso.summary.substring(c_start, c_end);
 
-            d_start = this.curso.summary.indexOf("data-inicio-dia") + 17;
+            d_start = this.curso.summary.indexOf("dt-inicio-dia") + 15;
             d_end = this.curso.summary.indexOf("</p>", d_start);
             this.curso.dia = this.curso.summary.substring(d_start, d_end);
 
-            m_start = this.curso.summary.indexOf("data-inicio-mes") + 17;
+            m_start = this.curso.summary.indexOf("dt-inicio-mes") + 15;
             m_end = this.curso.summary.indexOf("</p>", m_start);
             this.curso.mes = this.curso.summary.substring(m_start, m_end);
+
+            l_start = this.curso.summary.indexOf("dt-link-inscricao") + 19;
+            l_end = this.curso.summary.indexOf("</p>", l_start);
+            this.curso.link_inscricao = this.curso.summary.substring(l_start, l_end);
+
+            mi_start = this.curso.summary.indexOf("dt-inicio-matricula") + 21;
+            mi_end = this.curso.summary.indexOf("</p>", mi_start);
+            new_timestart = this.curso.summary.substring(mi_start, mi_end);
+
+            mf_start = this.curso.summary.indexOf("dt-fim-matricula") + 18;
+            mf_end = this.curso.summary.indexOf("</p>", mf_start);
+            new_timefinish = this.curso.summary.substring(mf_start, mf_end);
+
+            alert(new_timestart);
+
+            new_date_start  = String(new_timestart  + ' 20:59:59');
+            new_date_end    = String(new_timefinish + ' 20:59:59');
+            
+            alert(new_date_start);
+            
+            up_timestart = new Date('2018-08-01 20:59:59').getTime() / 1000;
+            up_timefinish = new Date(new_timefinish).getTime() / 1000;
+
+            alert(up_timestart);
 
         }
     },
