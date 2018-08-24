@@ -51,11 +51,12 @@
                         <li v-for="item in cursos" class="col-md-4 pt-2 pb-2">
                            <a :href="'/landing_page/curso.php?q=' + item.id">
                               <div class="card">
-                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
-                                 <div class="card-body">
-                                    <h6 class="color-green">{{ item.fullname }}</h6>
-                                    <p class="card-text" v-html="item.descricao"></p>
-                                 </div>
+                                <span class="info-matricula" v-if="item.matricula == true">Matrículas abertas</span>
+                                <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
+                                <div class="card-body">
+                                  <h6 class="color-green">{{ item.fullname }}</h6>
+                                  <p class="card-text" v-html="item.descricao"></p>
+                                </div>
                               </div>
                            </a>
                         </li>
@@ -97,6 +98,7 @@
                   <li v-for="residencia in residencias"  class="col-md-4 pt-2 pb-2">
                     <a :href="'/landing_page/curso.php?q=' + residencia.id">
                       <div class="card">
+                        <span class="info-matricula" v-if="residencia.matricula == true">Matrículas abertas</span>
                         <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + residencia.img_capa_curso + ')' }"></div>
                         <div class="card-body">
                           <h6 class="color-green">{{ residencia.fullname }}</h6>
@@ -153,6 +155,7 @@
                         <li v-for="evento in eventos" class="col-md-4 pt-2 pb-2">
                            <a :href="'/landing_page/curso.php?q=' + evento.id">
                               <div class="card">
+                              <span class="info-matricula" v-if="evento.matricula == true">Matrículas abertas</span>
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + evento.img_capa_curso + ')' }"></div>
                                  <div class="card-body">
                                     <h6 class="color-green">{{ evento.fullname }}</h6>

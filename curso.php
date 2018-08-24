@@ -35,7 +35,12 @@
                 </div>
                 <div class="col-md-3">
                     <h4 class="color-green">RESERVE SUA VAGA</h4>
-                    <a :href="curso.link_inscricao" type="button" class="btn btn-action ">Reservar</a>
+                    <div v-if="curso.matricula == true">
+                        <a :href="curso.link_inscricao" type="button" class="btn btn-action">Reservar</a>
+                    </div>
+                    <div v-if="curso.matricula == false">
+                        <button type="button" type="button" class="btn btn-disabled" disabled>Matriculas encerradas</button>
+                    </div>
                 </div>
             </div>
         </div>

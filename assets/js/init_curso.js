@@ -31,7 +31,7 @@ var app = new Vue({
                 this.curso.img_capa_curso = this.curso.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
             }
             
-            // recuperando itens
+            // Recuperando itens
             p_start = this.curso.summary.indexOf("dt-preco") + 10;
             p_end = this.curso.summary.indexOf("</p>", p_start);
             this.curso.preco = this.curso.summary.substring(p_start, p_end);
@@ -64,17 +64,18 @@ var app = new Vue({
             mf_end = this.curso.summary.indexOf("</p>", mf_start);
             new_timefinish = this.curso.summary.substring(mf_start, mf_end);
 
-            alert(new_timestart);
-
-            new_date_start  = String(new_timestart  + ' 20:59:59');
-            new_date_end    = String(new_timefinish + ' 20:59:59');
+            ts = new_timestart.split("-");
+            tf = new_timefinish.split("-");
             
-            alert(new_date_start);
-            
-            up_timestart = new Date('2018-08-01 20:59:59').getTime() / 1000;
-            up_timefinish = new Date(new_timefinish).getTime() / 1000;
+            timestart  = new Date(String(ts[2] +'-'+ ts[1] +'-'+ ts[0]+ ' 20:59:59')).getTime()/1000;
+            timefinish = new Date(String(tf[2] +'-'+ tf[1] +'-'+ tf[0]+ ' 20:59:59')).getTime()/1000;
 
-            alert(up_timestart);
+            var hoje = Math.round(+new Date()/1000);
+            if( hoje >= timestart && hoje <= timefinish){
+                this.curso.matricula = true;
+            }else{
+                this.curso.matricula = false;
+            }
 
         }
     },

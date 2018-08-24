@@ -231,6 +231,16 @@ section{
         h6 { margin-bottom: 30px; }
         .card-img { height: 75px; background-position: center; border-radius: 50%; width: 75px; margin: auto; }
         .card { border-radius: initial; border: 1px solid #00874b; min-height: 330px; }
+        .info-matricula{
+            position: absolute;
+            top: 20px;
+            font-size: 12px;
+            background: #e7a61a;
+            padding: 2px 4px;
+            -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+            -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+            box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+        }
         li { width: 275px; float: left; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
             p { flex: 1 0 auto; }
             a { color: #212529; text-decoration: none; }
@@ -480,8 +490,28 @@ a.link_slideshow{
         @extend %a;
     }
 }
+
+.btn-disabled{
+    background: gray;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: inherit;
+    transition: 0.3s;
+    a{
+        color: white;
+        @extend %a;
+    }
+}
+
 .btn-action:hover{
     background:$var-color-hardgreen;
+}
+.btn-disabled:hover{
+    background: gray;
 }
 
 #navigation{
