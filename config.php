@@ -1,8 +1,8 @@
 <?php
 
     // URL Paginas
-    // define("url_site",      "http://eadh.liga.org.br");
-    define("url_site", "http://localhost");
+    define("url_site",      "http://eadh.liga.org.br");
+    // define("url_site", "http://localhost");
     
     define("url_index",         url_site."/landing_page");    
     define("url_calendario",    url_site."/landing_page/index.php#calendario");
@@ -27,6 +27,5 @@
     define("url_res_multidisciplinar",  url_residencia."?categoryid=18#trocar-modalidade");
 
     define("url_moodle", url_site."/moodle");
-
 
 ?>

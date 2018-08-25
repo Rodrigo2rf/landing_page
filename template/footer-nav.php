@@ -20,24 +20,24 @@
                     <div class="col d-none d-md-block">
                         <p><strong><a href="<?=url_cursos?>">Cursos</a></strong></p>
                         <ul>
-                            <li><a href="<?=url_redirect_presencial?>">Técnicos</a></li>
-                            <li><a href="<?=url_redirect_semipresencial?>">Pós-Graduação</a></li>
-                            <li><a href="<?=url_redirect_ead?>">Atualização</a></li>
+                            <li><a href="<?=url_cur_tecnico?>">Técnicos</a></li>
+                            <li><a href="<?=url_cur_posgraduacao?>">Pós-Graduação</a></li>
+                            <li><a href="<?=url_cur_atualizacao?>">Atualização</a></li>
                         </ul>
                     </div>
                     <div class="col d-none d-md-block">
-                        <p><strong><a href="<?=url_cursos?>">Residência</a></strong></p>
+                        <p><strong><a href="<?=url_residencia?>">Residência</a></strong></p>
                         <ul>
-                            <li><a href="<?=url_redirect_presencial?>">Médica</a></li>
-                            <li><a href="<?=url_redirect_semipresencial?>">Multidisciplinar</a></li>
+                            <li><a href="<?=url_res_medica?>">Médica</a></li>
+                            <li><a href="<?=url_res_multidisciplinar?>">Multidisciplinar</a></li>
                         </ul>
                     </div>
                     <div class="col d-none d-md-block">
-                        <p><strong><a href="<?=url_cursos?>">Eventos</a></strong></p>
+                        <p><strong><a href="<?=url_eventos?>">Eventos</a></strong></p>
                         <ul>
-                            <li><a href="<?=url_redirect_presencial?>">Congressos</a></li>
-                            <li><a href="<?=url_redirect_semipresencial?>">Simpósios</a></li>
-                            <li><a href="<?=url_redirect_ead?>">Jornadas</a></li>
+                            <li><a href="<?=url_eve_congressos?>">Congressos</a></li>
+                            <li><a href="<?=url_eve_simposios?>">Simpósios</a></li>
+                            <li><a href="<?=url_eve_jornadas?>">Jornadas</a></li>
                         </ul>
                     </div>
                     <div class="col d-none d-md-block">
