@@ -261,13 +261,21 @@ section{
 
 /* Pagina com todos os cursos 'saiba-mais' */
 #info-cursos{
-    background-image: url('../../img/student.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center; 
     background-color: $var-color-green;
     position: relative;
     min-height: 370px;
+    .bg-eventos{
+        background-image: $background-eventos;
+    }
+    .bg-cursos{
+        background-image: $background-cursos;
+    }
+    .bg-residencia{
+        background-image: $background-residencia;
+    }
     .menu-de-cursos{
         position: relative;
         bottom: -125px;

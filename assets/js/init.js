@@ -16,7 +16,7 @@ new Vue({
                     var string = this.imagensShowcase[i].anexopath;
 
                     type = string.split(';');
-                    string = type[0].split('/');
+                    string = type[0].split('//');
                     string = string.pop();
 
                     if ( string !== ''){

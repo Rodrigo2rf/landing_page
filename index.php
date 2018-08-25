@@ -3,6 +3,8 @@
     require('template/header-nav.php');
 ?>
 
+<div class="wrap push">
+
 <!-- SLIDER --> 
 <header id="showcase_landing_page">
    <div class="barra-pesquisar d-none d-sm-block">
@@ -33,7 +35,6 @@
 
 <!-- EXIBICAO DE CURSOS -->
 <div id="sessoes">
-  
   <!-- -->
   <section class="container-fluid bg-white">
     <div class="container container-cursos">
@@ -41,7 +42,7 @@
          <div :class="['col-md-'+qtdCursos.conteudo]">
             <h3 class="color-green">Cursos</h3>
             <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
-            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
+            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>">Acessar</a>
          </div>
          <div :class="['col-md-'+qtdCursos.todosCursos]" v-if="qtdCursos.conteudo < 12">
             <div class="wrapper">
@@ -130,7 +131,7 @@
         <div :class="['order-1 order-md-12 col-md-'+qtdResidencias.conteudo]">
         <h3 class="color-green">Residência</h3>
             <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
-          <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=3">Acessar</a>
+          <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_residencia?>">Acessar</a>
         </div>
       </div>
     </div>
@@ -145,7 +146,7 @@
          <div :class="['col-md-'+qtdEventos.conteudo]">
             <h3 class="color-green">Eventos</h3>
             <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.</p>
-            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_cursos?>?q=2">Acessar</a>
+            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_eventos?>">Acessar</a>
          </div>
          <div :class="['col-md-'+qtdEventos.todosEventos]" v-if="qtdEventos.conteudo < 12">
             <div class="wrapper">
@@ -331,6 +332,8 @@
    </div>
 </section>
 <!-- -->
+
+</div>
 
 <?php
   require('template/footer-nav.php');

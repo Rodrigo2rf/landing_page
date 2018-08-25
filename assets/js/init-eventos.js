@@ -38,62 +38,22 @@ var app = new Vue({
             for(var i=0; i < this.rows.length; i++){
                 if( categoryid == 19 ){
                     if( this.rows[i].categoryid >= 19 && this.rows[i].categoryid <= 22 ){
-                        if( this.rows[i].overviewfiles[0] == null ){ 
-                                this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                        }else{
-                                this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                        }
-                        // recuperando descricao
-                        p_start = this.rows[i].summary.indexOf("apresentacao-card") + 19;
-                        p_end = this.rows[i].summary.indexOf("</p>", p_start);
-                        this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
-                        var c = this.rows[i];
-                        this.cursos.push(c);
+                        this.mount_info( this.rows[i] );
                     }
                 }
                 if( categoryid == 20 ){
                     if( this.rows[i].categoryid == 20 ){
-                        if( this.rows[i].overviewfiles[0] == null ){ 
-                                this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                        }else{
-                                this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                        }
-                        // recuperando descricao
-                        p_start = this.rows[i].summary.indexOf("apresentacao-card") + 19;
-                        p_end = this.rows[i].summary.indexOf("</p>", p_start);
-                        this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
-                        var c = this.rows[i];
-                        this.cursos.push(c);
+                        this.mount_info( this.rows[i] );
                     }
                 }
                 if( categoryid == 21 ){
                     if( this.rows[i].categoryid == 21 ){
-                        if( this.rows[i].overviewfiles[0] == null ){ 
-                                this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                        }else{
-                                this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                        }
-                        // recuperando descricao
-                        p_start = this.rows[i].summary.indexOf("apresentacao-card") + 19;
-                        p_end = this.rows[i].summary.indexOf("</p>", p_start);
-                        this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
-                        var c = this.rows[i];
-                        this.cursos.push(c);
+                        this.mount_info( this.rows[i] );
                     }
                 }
                 if( categoryid == 22 ){
                     if( this.rows[i].categoryid == 22 ){
-                        if( this.rows[i].overviewfiles[0] == null ){ 
-                                this.rows[i].img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
-                        }else{
-                                this.rows[i].img_capa_curso = this.rows[i].overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
-                        }
-                        // recuperando descricao
-                        p_start = this.rows[i].summary.indexOf("apresentacao-card") + 19;
-                        p_end = this.rows[i].summary.indexOf("</p>", p_start);
-                        this.rows[i].descricao = this.rows[i].summary.substring(p_start, p_end);
-                        var c = this.rows[i];
-                        this.cursos.push(c);
+                        this.mount_info( this.rows[i] );
                     }
                 }
             }
@@ -141,6 +101,42 @@ var app = new Vue({
                 .get(url)
                 .then(response => ( this.rows = response.data.courses ))
                 .finally(() => this.loading = true);
+        },
+        mount_info: function( rows ){
+            if( rows.overviewfiles[0] == null ){ 
+                rows.img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
+            }else{
+                rows.img_capa_curso = rows.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
+            }
+            
+            // recuperando descricao
+            p_start = rows.summary.indexOf("apresentacao-card") + 19;
+            p_end = rows.summary.indexOf("</p>", p_start);
+            rows.descricao = rows.summary.substring(p_start, p_end);
+
+            mi_start = rows.summary.indexOf("dt-inicio-matricula") + 21;
+            mi_end = rows.summary.indexOf("</p>", mi_start);
+            timestart = rows.summary.substring(mi_start, mi_end);
+
+            mf_start = rows.summary.indexOf("dt-fim-matricula") + 18;
+            mf_end = rows.summary.indexOf("</p>", mf_start);
+            timefinish = rows.summary.substring(mf_start, mf_end);
+
+            ts = timestart.split("-");
+            tf = timefinish.split("-");
+            
+            timestart  = new Date(String(ts[2] +'-'+ ts[1] +'-'+ ts[0]+ ' 20:59:59')).getTime()/1000;
+            timefinish = new Date(String(tf[2] +'-'+ tf[1] +'-'+ tf[0]+ ' 20:59:59')).getTime()/1000;
+
+            var hoje = Math.round(+new Date()/1000);
+            if( hoje >= timestart && hoje <= timefinish){
+                rows.matricula = true;
+            }else{
+                rows.matricula = false;
+            }   
+            
+            var c = rows;
+            this.cursos.push(c);
         }
     },
     created: function () {

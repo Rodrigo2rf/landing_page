@@ -5,7 +5,7 @@
 
 ?>
 
-<div id="curso">
+<div id="curso"  class="wrap push">
 
     <section id="info-cursos" class="container-fluid"> 
         <div class="row justify-content-center">
