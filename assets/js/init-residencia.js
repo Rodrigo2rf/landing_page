@@ -24,7 +24,8 @@ var app = new Vue({
         countOfPage: 40,
         currPage: 1,
         filter_fullname: '',
-        categoryid : ''
+        categoryid : '',
+        filtro_matricula: 1
     },
     filters: {
         tratar_string (text) {
@@ -38,17 +39,17 @@ var app = new Vue({
             for(var i=0; i < this.rows.length; i++){
                 if( categoryid == 16 ){
                     if( this.rows[i].categoryid >= 16 && this.rows[i].categoryid <= 18 ){
-                        this.mount_info( this.rows[i] );
+                        this.mount_info( this.rows[i], this.filtro_matricula );
                     }
                 }
                 if( categoryid == 17 ){
                     if( this.rows[i].categoryid == 17 ){
-                        this.mount_info( this.rows[i] );
+                        this.mount_info( this.rows[i], this.filtro_matricula );
                     }
                 }
                 if( categoryid == 18 ){
                     if( this.rows[i].categoryid == 18 ){
-                        this.mount_info( this.rows[i] );
+                        this.mount_info( this.rows[i], this.filtro_matricula );
                     }
                 }
             }
@@ -86,6 +87,9 @@ var app = new Vue({
         getCursos: function( categoryid ){
             this.init( categoryid );
         },
+        changeFilter: function( ){
+            this.init( categoryid );
+        },
         init: function( categoryid ){
             if ( categoryid >= 16 && categoryid <= 18 || categoryid == null ){ 
                 url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
@@ -97,7 +101,7 @@ var app = new Vue({
                 .then(response => ( this.rows = response.data.courses ))
                 .finally(() => this.loading = true);
         },
-        mount_info: function( rows ){
+        mount_info: function( rows, filtro ){
             if( rows.overviewfiles[0] == null ){ 
                 rows.img_capa_curso = 'http://eadh.liga.org.br/landing_page/assets/img/img_default.png';
             }else{
@@ -130,8 +134,16 @@ var app = new Vue({
                 rows.matricula = false;
             }   
             
-            var c = rows;
-            this.cursos.push(c);
+            // filtro para exibir por matricula aberta
+            if( filtro == 2 && rows.matricula == true ){
+                var c = rows;
+                this.cursos.push(c);
+            }
+            if( filtro == 1){
+                var c = rows;
+                this.cursos.push(c);
+            }
+
         }
     },
     created: function () {

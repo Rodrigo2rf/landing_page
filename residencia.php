@@ -17,8 +17,17 @@
 
     <section class="container-fluid">
         <div class="container container-cursos">
+
+                <div class="block-filtro" style="width: 270px">
+                    <span class="float-left mr-2">Filtrar por:</span>
+                    <select name="LeaveType" @change="changeFilter()" class="form-control form-control-sm" style="width: 195px" v-model="filtro_matricula">
+                        <option value="1" selected="selected">Todos</option>
+                        <option value="2">Matrículas abertas</option>
+                    </select>
+                </div>
+
             <div v-if="!showList" color="error">
-                <p class="text-danger">Nenhum curso encontrado!</p>
+                <p class="text-danger">Nenhuma residência encontrada!</p>
             </div>
             <div v-if="showList"> 
                 <div class="row">

@@ -235,7 +235,8 @@ section{
             position: absolute;
             top: 20px;
             font-size: 12px;
-            background: #e7a61a;
+            background: #ffc73f;
+            font-weight: bold;
             padding: 2px 4px;
             -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
             -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
@@ -246,6 +247,10 @@ section{
             a { color: #212529; text-decoration: none; }
             a .card:hover { border: 1px solid #abdbc7; -webkit-box-shadow: 0px 0px 12px -1px #abdbc7; -moz-box-shadow: 0px 0px 12px -1px #abdbc7; box-shadow: 0px 0px 12px -1px #abdbc7; }
         }
+    }
+    .block-filtro{
+        margin: auto;
+        color: #707070;
     }
     .visible-only-xs,  .visible-smaller-lg{
         display: none;
@@ -267,15 +272,6 @@ section{
     background-color: $var-color-green;
     position: relative;
     min-height: 370px;
-    .bg-eventos{
-        background-image: $background-eventos;
-    }
-    .bg-cursos{
-        background-image: $background-cursos;
-    }
-    .bg-residencia{
-        background-image: $background-residencia;
-    }
     .menu-de-cursos{
         position: relative;
         bottom: -125px;
@@ -297,8 +293,16 @@ section{
             background: linear-gradient(0deg, $var-color-red 2px, white 5px);
         }
     }
+}  
+#info-cursos.bg-eventos{
+    background-image: $background-eventos;
 }
-
+#info-cursos.bg-cursos{
+    background-image: $background-cursos;
+}
+#info-cursos.bg-residencia{
+    background-image: $background-residencia;
+}
 #calendario{
     .eventos-calendario{
         list-style-type: none;
@@ -388,18 +392,21 @@ section{
     a{
         color: white;
     }
-    .menu-list .list-group-item{
-        background: $var-color-green;
-        .fa.fa-caret-down{
-            float: right;
+    .menu-list{ 
+        .list-group-item{
+            background: $var-color-green;
+            font-size: 125% !important;
+            .fa.fa-caret-down{
+                float: right;
+            }
         }
     }
-        .collapse .list-group-item{
-            background: $var-color-hardgreen;
-        }
-        .collapse a.list-group-item{
-            padding-left: 35px;
-        }
+    .collapse .list-group-item{
+        background: $var-color-hardgreen;
+    }
+    .collapse a.list-group-item{
+        padding-left: 35px;
+    }
 }
 .menu-mobile{
     display: none !important;  

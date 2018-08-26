@@ -49,13 +49,20 @@
                     <div class="d-none d-lg-block">
                         <ul class="list-inline icons-redes-sociais text-right">
                             <li class="list-inline-item">
-                                <a href="#"><img src="assets/img/icones_redes_sociais/facebook.svg"></a>
+                                <a href="https://www.facebook.com/ligacontraocancer/" target="_blank" title="Facebook">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/facebook.svg"></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#"><img src="assets/img/icones_redes_sociais/instagram.svg"></a>
+                                <a href="https://www.instagram.com/ligacontraocancer/" target="_blank" title="Instagram">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/instagram.svg"></a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#"><img src="assets/img/icones_redes_sociais/twitter.svg"></a>
+                                <a href="https://twitter.com/liga_cancer" target="_blank" title="Twitter">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/twitter.svg"></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.youtube.com/c/LigaContraoC%C3%A2ncerrn" target="_blank" title="Youtube">
+                                <img class="ml-3 mr-3" src="<?=url_index?>/assets/img/icones_redes_sociais/youtube.svg"></a>
                             </li>
                         </ul>
                     </div>

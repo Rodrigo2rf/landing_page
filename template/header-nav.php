@@ -2,16 +2,27 @@
 <nav id="menu" class="panel" role="navigation">
     <div class="menu-list">
         <!-- menu -->
-        <div id="MainMenu">
+        <div id="MainMenu" class="menu-lateral-mobile">
             <div class="list-group panel">
-                <a href="<?=url_index?>" class="list-group-item" data-parent="#MainMenu">Home</a>
-                <a href="#cursos" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu">Cursos<i class="fa fa-caret-down"></i></a>
+                <a href="<?=url_index?>" class="list-group-item" data-parent="#MainMenu"><span style="font-size:125%;">Home</span></a>
+                <a href="#cursos" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Cursos</span><i class="fa fa-caret-down"></i></a>
                 <div class="collapse" id="cursos">
-                    <a href="<?=url_redirect_presencial?>" class="list-group-item" style="background:#005e34; padding-left:35px;">Presenciais</a>
-                    <a href="<?=url_redirect_semipresencial?>" class="list-group-item" style="background:#005e34; padding-left:35px;">Semi-presenciais</a>
-                    <a href="<?=url_redirect_ead?>" class="list-group-item" style="background:#005e34; padding-left:35px;">À distância</a>
+                    <a href="<?=url_cur_tecnico?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Técnico</a>
+                    <a href="<?=url_cur_posgraduacao?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Pós-Graduação</a>
+                    <a href="<?=url_cur_atualizacao?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Atualização</a>
                 </div>
-                <a href="<?=url_moodle?>" class="list-group-item" data-parent="#MainMenu">Login</a>
+                <a href="#posgraduacao" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Pós-Graduação</span><i class="fa fa-caret-down"></i></a>
+                <div class="collapse" id="posgraduacao">
+                    <a href="<?=url_res_medica?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Médica</a>
+                    <a href="<?=url_res_multidisciplinar?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Multidisciplinar</a>
+                </div>
+                <a href="#eventos" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Eventos</span><i class="fa fa-caret-down"></i></a>
+                <div class="collapse" id="eventos">
+                    <a href="<?=url_eve_congressos?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Congressos</a>
+                    <a href="<?=url_eve_simposios?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Simpósios</a>
+                    <a href="<?=url_eve_jornadas?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Jornadas</a>
+                </div>
+                <a href="<?=url_moodle?>" class="list-group-item" data-parent="#MainMenu"><span style="font-size:125%;">Login</span></a>
             </div>
         </div>
     </div>
@@ -28,9 +39,11 @@
 
     <div class="container-fluid menu-mobile">
         <div class="container">
-            <a class="menu-link" href="#menu"><i class="material-icons">menu</i></a>
-            <a href="<?=url_index?>">
-            <img src="<?=url_index?>/assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
+            <div class="row">
+                <a class="menu-link" href="#menu"><i class="material-icons">menu</i></a>
+                <a href="<?=url_index?>">
+                <img src="<?=url_index?>/assets/img/logo.png" height="50px" alt="Liga Contra o Câncer" title="Liga Contra o Câncer"></a>
+            </div>
         </div>
     </div>
 
@@ -48,13 +61,20 @@
                     <div class="menu-horizontal float-right">
                         <ul class="list-inline icons-redes-sociais text-center">
                             <li class="list-inline-item m-0">
-                                <a href="#"><img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/facebook_gray.svg"></a>
+                                <a href="https://www.facebook.com/ligacontraocancer/" target="_blank" title="Facebook">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/facebook_gray.svg"></a>
                             </li>
                             <li class="list-inline-item m-0">
-                                <a href="#"><img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/instagram_gray.svg"></a>
+                                <a href="https://www.instagram.com/ligacontraocancer/" target="_blank" title="Instagram">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/instagram_gray.svg"></a>
                             </li>
                             <li class="list-inline-item m-0">
-                                <a href="#"><img class="ml-3 mr-3" src="<?=url_index?>/assets/img/icones_redes_sociais/twitter_gray.svg"></a>
+                                <a href="https://twitter.com/liga_cancer" target="_blank" title="Twitter">
+                                <img class="ml-3" src="<?=url_index?>/assets/img/icones_redes_sociais/twitter_gray.svg"></a>
+                            </li>
+                            <li class="list-inline-item m-0">
+                                <a href="https://www.youtube.com/c/LigaContraoC%C3%A2ncerrn" target="_blank" title="Youtube">
+                                <img class="ml-3 mr-3" src="<?=url_index?>/assets/img/icones_redes_sociais/youtube_gray.svg"></a>
                             </li>
                         </ul>
                     </div>
