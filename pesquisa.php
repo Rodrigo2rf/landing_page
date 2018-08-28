@@ -3,38 +3,30 @@
     require('template/header.php');
     require('template/header-nav.php');
 
-    if(isset($_GET['categoryid'])){ 
-        $id_cursos = $_GET['categoryid']; 
-        if( $id_cursos >= 7 && $id_cursos <= 9 ){ $id_categoria_busca = 7; }
-        if( $id_cursos >= 10 && $id_cursos <= 12 ){ $id_categoria_busca = 10; }
-        if( $id_cursos >= 13 && $id_cursos <= 15 ){ $id_categoria_busca = 13; }
-    }
-
 ?>
 
 <div id="app"  class="wrap push">
 
-    <?php
-        require('template/banner-cursos.php');
-    ?>
+    <section id="info-cursos" class="container-fluid bg-cursos">
+        <div class="offset-md-2 col-md-8 mb-5">
+            <h2 class="text-light mb-5">kmlkl</h2>
+            <p class="text-light">Com novas instalações e uma maior quantidade de cursos e eventos oferecidos, a Escola de Oncologia desenvolverá ainda mais o estudo e as pesquisas nas áreas ligadas à atenção oncológica.</p>
+        </div>    
+        <div class="barra-pesquisar">
+            <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
+        </div>
+    </section>
 
     <section class="container-fluid">
         <div class="container container-cursos">
-            <div id="navigation">
-                <ul>
-                    <li @click.prevent="getCursos(<?=$id_categoria_busca?>)"><a class="sub-menu-categoria active" href="">Todos</a></li>
-                    <li @click.prevent="getCursos(<?=$id_categoria_busca + 1?>)"><a class="sub-menu-categoria " href="">Presencial</a></li>
-                    <li @click.prevent="getCursos(<?=$id_categoria_busca + 2?>)"><a class="sub-menu-categoria " href="">À Distância</a></li>
-                </ul>
-            </div>
 
-                <div class="block-filtro" style="width: 270px">
-                    <span class="float-left mr-2">Filtrar por:</span>
-                    <select name="LeaveType" @change="changeFilter()" class="form-control form-control-sm" style="width: 195px" v-model="filtro_matricula">
-                        <option value="1" selected="selected">Todos</option>
-                        <option value="2">Matrículas abertas</option>
-                    </select>
-                </div>
+            <div class="block-filtro" style="width: 270px">
+                <span class="float-left mr-2">Filtrar por:</span>
+                <select name="LeaveType" @change="changeFilter()" class="form-control form-control-sm" style="width: 195px" v-model="filtro_matricula">
+                    <option value="1" selected="selected">Todos</option>
+                    <option value="2">Matrículas abertas</option>
+                </select>
+            </div>
 
             <div v-if="!showList" color="error">
                 <p class="text-danger">Nenhum curso encontrado!</p>
@@ -72,7 +64,7 @@
 <?php
 
     require('template/footer-nav.php');
-    require('template/footer-script-cursos.php');
+    require('template/footer-script-pesquisa.php');
     require('template/footer.php');
 
 ?>

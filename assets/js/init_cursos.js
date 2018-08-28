@@ -115,43 +115,42 @@ var app = new Vue({
             }else{
                 rows.img_capa_curso = rows.overviewfiles[0].fileurl + '?token=abd25152ce4f60bb1aeddb480c034867';
             }
-                // recuperando descricao
-                p_start = rows.summary.indexOf("apresentacao-card") + 19;
-                p_end = rows.summary.indexOf("</p>", p_start);
-                rows.descricao = rows.summary.substring(p_start, p_end);
+            // recuperando descricao
+            p_start = rows.summary.indexOf("apresentacao-card") + 19;
+            p_end = rows.summary.indexOf("</p>", p_start);
+            rows.descricao = rows.summary.substring(p_start, p_end);
 
-                mi_start = rows.summary.indexOf("dt-inicio-matricula") + 21;
-                mi_end = rows.summary.indexOf("</p>", mi_start);
-                timestart = rows.summary.substring(mi_start, mi_end);
-    
-                mf_start = rows.summary.indexOf("dt-fim-matricula") + 18;
-                mf_end = rows.summary.indexOf("</p>", mf_start);
-                timefinish = rows.summary.substring(mf_start, mf_end);
+            mi_start = rows.summary.indexOf("dt-inicio-matricula") + 21;
+            mi_end = rows.summary.indexOf("</p>", mi_start);
+            timestart = rows.summary.substring(mi_start, mi_end);
 
-                ts = timestart.split("-");
-                tf = timefinish.split("-");
-                
-                timestart  = new Date(String(ts[2] +'-'+ ts[1] +'-'+ ts[0]+ ' 20:59:59')).getTime()/1000;
-                timefinish = new Date(String(tf[2] +'-'+ tf[1] +'-'+ tf[0]+ ' 20:59:59')).getTime()/1000;
+            mf_start = rows.summary.indexOf("dt-fim-matricula") + 18;
+            mf_end = rows.summary.indexOf("</p>", mf_start);
+            timefinish = rows.summary.substring(mf_start, mf_end);
 
-                var hoje = Math.round(+new Date()/1000);
-                if( hoje >= timestart && hoje <= timefinish){
-                    rows.matricula = true;
-                }else{
-                    rows.matricula = false;
-                }   
+            ts = timestart.split("-");
+            tf = timefinish.split("-");
+            
+            timestart  = new Date(String(ts[2] +'-'+ ts[1] +'-'+ ts[0]+ ' 20:59:59')).getTime()/1000;
+            timefinish = new Date(String(tf[2] +'-'+ tf[1] +'-'+ tf[0]+ ' 20:59:59')).getTime()/1000;
 
-                // filtro para exibir por matricula aberta
-                if( filtro == 2 && rows.matricula == true ){
-                    var c = rows;
-                    this.cursos.push(c);
-                }
-                if( filtro == 1){
-                    var c = rows;
-                    this.cursos.push(c);
-                }  
-                
+            var hoje = Math.round(+new Date()/1000);
+            if( hoje >= timestart && hoje <= timefinish){
+                rows.matricula = true;
+            }else{
+                rows.matricula = false;
+            }   
+
+            // filtro para exibir por matricula aberta
+            if( filtro == 2 && rows.matricula == true ){
+                var c = rows;
+                this.cursos.push(c);
             }
+            if( filtro == 1){
+                var c = rows;
+                this.cursos.push(c);
+            }  
+        }
     },
     created: function () {
         categoryid = this.$route.query.categoryid; 

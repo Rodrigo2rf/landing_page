@@ -21,6 +21,11 @@
                         scrollTop : 0           
                     }, 500);
                 });
+
+                $('.sub-menu-categoria').click(function(){
+                    $('.sub-menu-categoria').removeClass('active');
+                    $(this).addClass('active');
+                });
                 
                 setTimeout( function(){                
                     $.getScript('assets/js/jquery.jcarousel.min.js');

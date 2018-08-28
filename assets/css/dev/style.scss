@@ -300,6 +300,9 @@ section{
 #info-cursos.bg-cursos{
     background-image: $background-cursos;
 }
+.bg-info-curso{
+    background-image: $background-curso;
+}
 #info-cursos.bg-residencia{
     background-image: $background-residencia;
 }
@@ -544,7 +547,8 @@ a.link_slideshow{
                 color: $var-color-gray;
                 padding-bottom: 3px;
             }
-            a:hover{
+            a:hover,
+            .sub-menu-categoria.active{
                 text-decoration: none;
                 border-bottom: 3px solid $var-color-red;
             }

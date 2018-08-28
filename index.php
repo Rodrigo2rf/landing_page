@@ -8,8 +8,8 @@
 <!-- SLIDER --> 
 <header id="showcase_landing_page">
    <div class="barra-pesquisar d-none d-sm-block">
-     <form action="cursos.php" method="get">
-       <input name="c" type="text">
+     <form action="pesquisa.php" method="get">
+       <input name="course" type="text">
        <button><img src="assets/img/icone_marcacao/search.svg"></button>
      </form>
    </div>

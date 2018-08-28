@@ -7,13 +7,13 @@
 
 <div id="curso"  class="wrap push">
 
-    <section id="info-cursos" class="container-fluid"> 
+    <section id="info-cursos" class="container-fluid bg-info-curso"> 
         <div class="row justify-content-center">
-            <div class="col-11 col-lg-7 col-sm-10 card-informacoes-curso">
+            <div v-if="curso.dia != '' && curso.horas != '' && curso.preco != ''" class="col-11 col-lg-7 col-sm-10 card-informacoes-curso">
                 <div class="row text-center">
-                    <div class="col"><span>{{ curso.dia }}</span> <br> {{ curso.mes }}</div>
-                    <div class="col"><span>{{ curso.horas }}</span> <br> HORAS/AULA</div>
-                    <div class="col"><span>{{ curso.preco }}</span> <br> INVESTIMENTO</div>
+                    <div v-if="curso.dia    != ''" class="col">Início <span>{{ curso.dia }}  </span> <br> {{ curso.mes }}</div>
+                    <div v-if="curso.horas  != ''" class="col"><span>{{ curso.horas }}</span> <br> HORAS/AULA</div>
+                    <div v-if="curso.preco  != ''" class="col"><span>{{ curso.preco }}</span> <br> INVESTIMENTO</div>
                 </div>
             </div>
         </div>
