@@ -9,8 +9,7 @@
 
     <section id="info-cursos" class="container-fluid bg-cursos">
         <div class="offset-md-2 col-md-8 mb-5">
-            <h2 class="text-light mb-5">kmlkl</h2>
-            <p class="text-light">Com novas instalações e uma maior quantidade de cursos e eventos oferecidos, a Escola de Oncologia desenvolverá ainda mais o estudo e as pesquisas nas áreas ligadas à atenção oncológica.</p>
+            <h2 class="text-light mb-5"></h2>
         </div>    
         <div class="barra-pesquisar">
             <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
@@ -20,7 +19,7 @@
     <section class="container-fluid">
         <div class="container container-cursos">
 
-            <div class="block-filtro" style="width: 270px">
+            <div class="block-filtro mb-2" style="width: 270px">
                 <span class="float-left mr-2">Filtrar por:</span>
                 <select name="LeaveType" @change="changeFilter()" class="form-control form-control-sm" style="width: 195px" v-model="filtro_matricula">
                     <option value="1" selected="selected">Todos</option>

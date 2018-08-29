@@ -26,6 +26,8 @@
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
         <script src="https://unpkg.com/vue-router"></script>
 
+
+
         <link rel="icon" href="<?=url_index?>/assets/img/favicon.png">
         <title>Escola de Oncologia</title>
   

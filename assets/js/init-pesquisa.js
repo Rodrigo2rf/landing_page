@@ -173,9 +173,9 @@ var app = new Vue({
       },
     },
     mounted () {    
-        c = this.$route.query.c;
-        if ( c != null ){
-            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=fullname&value='+c+'&moodlewsrestformat=json';
+        course = this.$route.query.course;
+        if ( course != null ){
+            url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&&field=shortname&value='+course+'&moodlewsrestformat=json';
         }else{
             url = 'http://eadh.liga.org.br/moodle/webservice/rest/server.php?wstoken=abd25152ce4f60bb1aeddb480c034867&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';           
         }

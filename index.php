@@ -33,6 +33,7 @@
    </div>
 </header>
 
+
 <!-- EXIBICAO DE CURSOS -->
 <div id="sessoes">
   <!-- -->
@@ -56,7 +57,7 @@
                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + item.img_capa_curso + ')' }"></div>
                                 <div class="card-body">
                                   <h6 class="color-green">{{ item.fullname }}</h6>
-                                  <p class="card-text" v-html="item.descricao"></p>
+                                  <!-- <p class="card-text" v-html="item.descricao"></p> -->
                                 </div>
                               </div>
                            </a>
@@ -306,7 +307,7 @@
 <section class="container">
    <div class="row">
       <div class="col-md-12 pb-3 text-center">
-         <h3 class="color-green">Apoio</h3>
+         <h3 class="color-green">Instituições Conveniadas</h3>
       </div>
    </div>
    <div class="row">

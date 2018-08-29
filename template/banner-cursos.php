@@ -7,13 +7,13 @@
         <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
     </div>
     <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
-        <a href="<?=url_cur_tecnico?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 7 && $id_cursos <= 9){ echo 'ativo'; }?>">
+        <a href="<?=url_cur_tecnico?>" class="link-menu-de-cursos col-sm-4 col-md-2 text-center <?php if($id_cursos >= 7 && $id_cursos <= 9){ echo 'ativo'; }?>">
             Cursos<br>Técnicos
         </a>
-        <a href="<?=url_cur_posgraduacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 10 && $id_cursos <= 12){ echo 'ativo'; }?>">
+        <a href="<?=url_cur_posgraduacao?>" class="link-menu-de-cursos col-sm-4 col-md-2 text-center <?php if($id_cursos >= 10 && $id_cursos <= 12){ echo 'ativo'; }?>">
             Cursos<br>Pós-Graduação
         </a>
-        <a href="<?=url_cur_atualizacao?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos >= 13 && $id_cursos <= 15){ echo 'ativo'; }?>"> 
+        <a href="<?=url_cur_atualizacao?>" class="link-menu-de-cursos col-sm-4 col-md-2 text-center <?php if($id_cursos >= 13 && $id_cursos <= 15){ echo 'ativo'; }?>"> 
             Cursos<br>Atualização
         </a> 
     </div>
