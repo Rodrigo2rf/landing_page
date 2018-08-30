@@ -1,6 +1,14 @@
         <script>
             $(document).ready(function(){
 
+                var availableTags = $("#cursos-disponiveis").text().split('"');
+
+                    $( function() {
+                        $( "#form-pesquisar-curso" ).autocomplete({
+                            source: availableTags
+                        });
+                    });
+
                 $('.menu-link').bigSlide();
                 $(window).scroll(function(){
                     if ($(this).scrollTop() > 300) {

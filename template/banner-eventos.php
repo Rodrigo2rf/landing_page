@@ -7,8 +7,8 @@
         <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
     </div>
     <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
-        <a href="<?=url_eve_congressos?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 20){ echo 'ativo'; }?>">Congressos</a>
-        <a href="<?=url_eve_simposios?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 21){ echo 'ativo'; }?>">Simpósios</a>
-        <a href="<?=url_eve_jornadas?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 22){ echo 'ativo'; }?>">Jornadas</a>
+        <a href="<?=url_eve_congressos?>" class="link-menu-de-cursos col-md-3 dv-3 text-center <?php if($id_cursos == 20){ echo 'ativo'; }?>">Congressos</a>
+        <a href="<?=url_eve_simposios?>" class="link-menu-de-cursos col-md-3 dv-3 text-center <?php if($id_cursos == 21){ echo 'ativo'; }?>">Simpósios</a>
+        <a href="<?=url_eve_jornadas?>" class="link-menu-de-cursos col-md-3 dv-3 text-center <?php if($id_cursos == 22){ echo 'ativo'; }?>">Jornadas</a>
     </div>
 </section>

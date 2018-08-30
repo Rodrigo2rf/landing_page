@@ -39,7 +39,7 @@
                         <a :href="curso.link_inscricao" type="button" class="btn btn-action">Reservar</a>
                     </div>
                     <div v-if="curso.matricula == false">
-                        <button type="button" type="button" class="btn btn-disabled" disabled>Matriculas encerradas</button>
+                        <button type="button" type="button" class="btn btn-disabled" disabled>Indisponível</button>
                     </div>
                 </div>
             </div>

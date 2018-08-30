@@ -164,6 +164,7 @@ header{
     .menu-horizontal a{
         line-height: $var-height;
         color: #707070;
+        font-size: 16px;
         @extend %a;
     }
     .menu-horizontal.no-gutters a:hover{
@@ -442,6 +443,15 @@ section{
     }
 }
 
+@media (max-width: 767px){
+    .dv-3{
+        width: 33%;
+    }
+    .dv-2{
+        width: 50%;
+    }
+}
+
 @media (max-width: 440px){
     .barra-pesquisar{
         width: 80%;
@@ -559,4 +569,25 @@ a.link_slideshow{
             margin-right: 15px;
         }
     }
+}
+
+#ui-id-1 {
+    background: white;
+    width: auto;
+    display: block;
+    width: 400px !important;
+    padding-right: 20px;
+    -webkit-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.ui-autocomplete li {
+    list-style-type: none;
+    cursor: pointer;
+    padding:10px 0px;
+}
+
+.ui-autocomplete li:hover{
+    color: #00874b;
 }

@@ -9,7 +9,7 @@
 <header id="showcase_landing_page">
    <div class="barra-pesquisar d-none d-sm-block">
      <form action="pesquisa.php" method="get">
-       <input name="course" type="text">
+       <input id="form-pesquisar-curso" name="course" type="text">
        <button><img src="assets/img/icone_marcacao/search.svg"></button>
      </form>
    </div>
@@ -36,6 +36,9 @@
 
 <!-- EXIBICAO DE CURSOS -->
 <div id="sessoes">
+
+  <div style="display:none" id="cursos-disponiveis">{{cursos_shortname}}</div>
+
   <!-- -->
   <section class="container-fluid bg-white">
     <div class="container container-cursos">
@@ -88,68 +91,12 @@
   <!-- -->
 
 
-  <!-- RESIDENCIAS -->
+
+  <!-- EVENTOS -->
   <section class="container-fluid bg-soft-blue">
     <div class="container container-cursos">
       <div class="row">
-        <div :class="['order-2 col-md-'+qtdResidencias.todosResidencias]" v-if="qtdResidencias.conteudo < 12">      
-          <div class="wrapper">
-            <div class="jcarousel-wrapper">
-              <div class="jcarousel">
-                <ul class="lista-cursos">
-                  <li v-for="residencia in residencias"  class="col-md-4 pt-2 pb-2">
-                    <a :href="'/landing_page/curso.php?q=' + residencia.id">
-                      <div class="card">
-                        <span class="info-matricula" v-if="residencia.matricula == true">Matrículas abertas</span>
-                        <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + residencia.img_capa_curso + ')' }"></div>
-                        <div class="card-body">
-                          <h6 class="color-green">{{ residencia.fullname }}</h6>
-                          <p class="card-text" v-html="residencia.descricao"></p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div v-if="qtdResidencias.qtd >= 4" class="d-block">
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                <p class="jcarousel-pagination"></p>
-              </div>
-              <div v-if="qtdResidencias.qtd == 3" class="visible-smaller-lg">
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                <p class="jcarousel-pagination"></p>
-              </div>
-              <div v-if="qtdResidencias.qtd == 2" class="visible-only-xs">
-                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
-                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-                <p class="jcarousel-pagination"></p>
-              </div>
-            </div>
-          </div>    
-        </div>
-        <div :class="['order-1 order-md-12 col-md-'+qtdResidencias.conteudo]">
-        <h3 class="color-green">Residência</h3>
-            <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
-          <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_residencia?>">Acessar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- -->
-
-
-  <!-- EVENTOS -->
-  <section class="container-fluid bg-white">
-    <div class="container container-cursos">
-      <div class="row">
-         <div :class="['col-md-'+qtdEventos.conteudo]">
-            <h3 class="color-green">Eventos</h3>
-            <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.</p>
-            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_eventos?>">Acessar</a>
-         </div>
-         <div :class="['col-md-'+qtdEventos.todosEventos]" v-if="qtdEventos.conteudo < 12">
+         <div :class="['order-2 col-md-'+qtdEventos.todosEventos]" v-if="qtdEventos.conteudo < 12">
             <div class="wrapper">
                <div class="jcarousel-wrapper">
                   <div class="jcarousel">
@@ -161,7 +108,7 @@
                                  <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + evento.img_capa_curso + ')' }"></div>
                                  <div class="card-body">
                                     <h6 class="color-green">{{ evento.fullname }}</h6>
-                                    <p class="card-text" v-html="evento.descricao"></p>
+                                    <!-- <p class="card-text" v-html="evento.descricao"></p> -->
                                  </div>
                               </div>
                            </a>
@@ -186,7 +133,64 @@
                </div>
             </div>
           </div>
+          <div :class="['order-1 order-md-12 col-md-'+qtdEventos.conteudo]">
+            <h3 class="color-green">Eventos</h3>
+            <p class="pt-2 pb-2">Nessa modalidade a escola ferece uma parte das aulas em formato presencial e a outra parte a distância.</p>
+            <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_eventos?>">Acessar</a>
+         </div>
         </div>
+    </div>
+  </section>
+  <!-- -->
+ 
+
+    <!-- RESIDENCIAS -->
+    <section class="container-fluid">
+    <div class="container container-cursos">
+      <div class="row">
+      <div :class="['col-md-'+qtdResidencias.conteudo]">
+        <h3 class="color-green">Residência</h3>
+            <p class="pt-2 pb-2">Cursos oferecidos no modelo tradicional, nessa modalidade as aulas serão ministradas dentro das dependências da Escola de Oncologia.</p>
+          <a class="btn btn-liga btn-type-1 float-md-right" href="<?=url_residencia?>">Acessar</a>
+        </div>
+        <div :class="['col-md-'+qtdResidencias.todosResidencias]" v-if="qtdResidencias.conteudo < 12">      
+          <div class="wrapper">
+            <div class="jcarousel-wrapper">
+              <div class="jcarousel">
+                <ul class="lista-cursos">
+                  <li v-for="residencia in residencias"  class="col-md-4 pt-2 pb-2">
+                    <a :href="'/landing_page/curso.php?q=' + residencia.id">
+                      <div class="card">
+                        <span class="info-matricula" v-if="residencia.matricula == true">Matrículas abertas</span>
+                        <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + residencia.img_capa_curso + ')' }"></div>
+                        <div class="card-body">
+                          <h6 class="color-green">{{ residencia.fullname }}</h6>
+                          <!-- <p class="card-text" v-html="residencia.descricao"></p> -->
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div v-if="qtdResidencias.qtd >= 4" class="d-block">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+              <div v-if="qtdResidencias.qtd == 3" class="visible-smaller-lg">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+              <div v-if="qtdResidencias.qtd == 2" class="visible-only-xs">
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                <p class="jcarousel-pagination"></p>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </div>
     </div>
   </section>
   <!-- -->

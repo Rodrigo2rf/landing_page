@@ -8,21 +8,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-3 info-endereco">
-                <p><strong>Endereço</strong></p>
+                <p><a href="<?=url_index?>">
+                <img src="<?=url_index?>/assets/img/logo_liga_footer.png" height="50px" alt="Escola de Oncologia" title="Escola de Oncologia"></a></p>
                 <p>Av. Miguel Castro, 1355, Dix-Sept Rosado, Natal/RN, CEP: 59062-000</p>
                 <p><strong>Fone: 55 (84) 4009 5501<br>sec.depecom@liga.org.br</strong></p>
             </div>
             <div class="col-md-12 col-lg-9 mt-md-4 mb-md-4 ">
                 <div class="row">
-                    <div class="col d-none d-md-block">
+                    <!-- <div class="col d-none d-md-block">
                         <p><strong><a href="<?=url_index?>">Home</a></strong></p>
-                    </div>
+                    </div> -->
                     <div class="col d-none d-md-block">
                         <p><strong><a href="<?=url_cursos?>">Cursos</a></strong></p>
                         <ul>
                             <li><a href="<?=url_cur_tecnico?>">Técnicos</a></li>
                             <li><a href="<?=url_cur_posgraduacao?>">Pós-Graduação</a></li>
                             <li><a href="<?=url_cur_atualizacao?>">Atualização</a></li>
+                        </ul>
+                    </div>
+                    <div class="col d-none d-md-block">
+                        <p><strong><a href="<?=url_eventos?>">Eventos</a></strong></p>
+                        <ul>
+                            <li><a href="<?=url_eve_congressos?>">Congressos</a></li>
+                            <li><a href="<?=url_eve_simposios?>">Simpósios</a></li>
+                            <li><a href="<?=url_eve_jornadas?>">Jornadas</a></li>
                         </ul>
                     </div>
                     <div class="col d-none d-md-block">
@@ -33,12 +42,7 @@
                         </ul>
                     </div>
                     <div class="col d-none d-md-block">
-                        <p><strong><a href="<?=url_eventos?>">Eventos</a></strong></p>
-                        <ul>
-                            <li><a href="<?=url_eve_congressos?>">Congressos</a></li>
-                            <li><a href="<?=url_eve_simposios?>">Simpósios</a></li>
-                            <li><a href="<?=url_eve_jornadas?>">Jornadas</a></li>
-                        </ul>
+                        <p><strong><a href="#">Pesquisa clínica</a></strong></p>
                     </div>
                     <div class="col d-none d-md-block">
                         <p><strong><a href="<?=url_calendario?>">Calendário</a></strong></p>

@@ -11,17 +11,18 @@
                     <a href="<?=url_cur_posgraduacao?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Pós-Graduação</a>
                     <a href="<?=url_cur_atualizacao?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Atualização</a>
                 </div>
-                <a href="#posgraduacao" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Pós-Graduação</span><i class="fa fa-caret-down"></i></a>
-                <div class="collapse" id="posgraduacao">
-                    <a href="<?=url_res_medica?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Médica</a>
-                    <a href="<?=url_res_multidisciplinar?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Multidisciplinar</a>
-                </div>
                 <a href="#eventos" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Eventos</span><i class="fa fa-caret-down"></i></a>
                 <div class="collapse" id="eventos">
                     <a href="<?=url_eve_congressos?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Congressos</a>
                     <a href="<?=url_eve_simposios?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Simpósios</a>
                     <a href="<?=url_eve_jornadas?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Jornadas</a>
                 </div>
+                <a href="#posgraduacao" class="list-group-item" data-toggle="collapse" data-parent="#MainMenu"><span style="font-size:125%;">Residência</span><i class="fa fa-caret-down"></i></a>
+                <div class="collapse" id="posgraduacao">
+                    <a href="<?=url_res_medica?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Médica</a>
+                    <a href="<?=url_res_multidisciplinar?>" class="list-group-item" style="background:#005e34; padding-left:35px; font-size:125%;">Multidisciplinar</a>
+                </div>
+                <a href="#" class="list-group-item" data-parent="#MainMenu"><span style="font-size:125%;">Pesquisa clínica</span></a>
                 <a href="<?=url_moodle?>" class="list-group-item" data-parent="#MainMenu"><span style="font-size:125%;">Login</span></a>
             </div>
         </div>
@@ -79,8 +80,17 @@
                         </ul>
                     </div>
                     <div class="float-right">
-                        <div class="menu-horizontal no-gutters float-right"><a href="<?=url_contato?>" class="pr-3 pl-3">Contato</a></div>
+                            <div class="menu-horizontal no-gutters float-right"><a href="<?=url_contato?>" class="pr-3 pl-3">Contato</a></div>
+                            
                             <div class="menu-horizontal no-gutters float-right"><a href="<?=url_calendario?>" class="pr-3 pl-3">Calendário</a></div>
+                            <div class="menu-horizontal no-gutters float-right"><a href="#" class="pr-3 pl-3">Pesquisa Clínica</a></div>
+                            <div class="menu-horizontal no-gutters dropdown float-right">
+                                <a href="<?=url_residencia?>" class="pr-3 pl-3">Residência</a>
+                                <div class="dropdown-content text-left">
+                                    <a href="<?=url_res_medica?>">Médica</a>
+                                    <a href="<?=url_res_multidisciplinar?>">Multidisciplinar</a>
+                                </div>
+                            </div> 
                             <div class="menu-horizontal no-gutters dropdown float-right">
                                 <a href="<?=url_eventos?>" class="pr-3 pl-3">Eventos</a>
                                 <div class="dropdown-content text-left">
@@ -88,14 +98,7 @@
                                     <a href="<?=url_eve_simposios?>">Simpósios</a>
                                     <a href="<?=url_eve_jornadas?>">Jornadas</a>
                                 </div>
-                            </div>
-                            <div class="menu-horizontal no-gutters dropdown float-right">
-                                <a href="<?=url_residencia?>" class="pr-3 pl-3">Residência</a>
-                                <div class="dropdown-content text-left">
-                                    <a href="<?=url_res_medica?>">Médica</a>
-                                    <a href="<?=url_res_multidisciplinar?>">Multidisciplinar</a>
-                                </div>
-                            </div>
+                            </div>                            
                             <div class="menu-horizontal no-gutters dropdown float-right">
                                 <a href="<?=url_cursos?>" class="pr-3 pl-3">Cursos</a>
                                 <div class="dropdown-content text-left">
@@ -104,7 +107,7 @@
                                     <a href="<?=url_cur_atualizacao?>">Atualização</a>
                                 </div>
                             </div>
-                            <div class="menu-horizontal no-gutters float-right"><a href="<?=url_index?>" class="pr-3 pl-3">Home</a></div>
+                            <!-- <div class="menu-horizontal no-gutters float-right"><a href="<?=url_index?>" class="pr-3 pl-3">Home</a></div> -->
                         </div>
                     </div>
                 </div>

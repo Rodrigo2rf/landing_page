@@ -58,6 +58,7 @@ new Vue({
     data: {
         todosCursos: [],
         cursos: [],
+        cursos_shortname: [],
         eventos: [],
         residencias: [],
         loading: true,
@@ -106,6 +107,11 @@ new Vue({
     watch: {
         todosCursos: function () {
             for(var i=0; i < this.todosCursos.length; i++){
+
+                if( this.todosCursos[i].id != 1 ){
+                    this.cursos_shortname.push( this.todosCursos[i].shortname );
+                }
+
                 if( this.todosCursos[i].categoryid >= 6 && this.todosCursos[i].categoryid <= 15 ){
                     
                     if( this.todosCursos[i].overviewfiles[0] == null ){ 

@@ -7,7 +7,7 @@
         <input type="text" placeholder="Pesquisar curso" v-model="filter_fullname">
     </div>
     <div id="trocar-modalidade" class="row justify-content-center menu-de-cursos">
-        <a href="<?=url_res_medica?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 17){ echo 'ativo'; }?>">Residência<br>Médica</a>
-        <a href="<?=url_res_multidisciplinar?>" class="link-menu-de-cursos col-md-2 text-center <?php if($id_cursos == 18){ echo 'ativo'; }?>">Residência<br>Multidisciplinar</a> 
+        <a href="<?=url_res_medica?>" class="link-menu-de-cursos col-md-3 dv-2 text-center <?php if($id_cursos == 17){ echo 'ativo'; }?>">Residência<br>Médica</a>
+        <a href="<?=url_res_multidisciplinar?>" class="link-menu-de-cursos col-md-3 dv-2 text-center <?php if($id_cursos == 18){ echo 'ativo'; }?>">Residência<br>Multidisciplinar</a> 
     </div>
 </section>
