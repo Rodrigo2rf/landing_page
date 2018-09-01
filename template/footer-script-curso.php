@@ -10,8 +10,6 @@
 <script src="assets/js/init_curso.js"></script>
 <script src="assets/js/jquery-ui.min.js"></script>
 
-<script src="assets/js/menu-responsivo.js"></script>
-
 <link rel="stylesheet" href="assets/css/dist/style.css">
 <link rel="stylesheet" href="assets/css/dist/jcarousel.css">
 <link rel="stylesheet" href="assets/css/dist/jcarousel.responsive.css">
