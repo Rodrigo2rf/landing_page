@@ -37,7 +37,7 @@
 <!-- EXIBICAO DE CURSOS -->
 <div id="sessoes">
 
-  <div style="display:none" id="cursos-disponiveis">{{cursos_shortname}}</div>
+  <div id="cursos-disponiveis" style="display:none">{{cursos_shortname}}</div>
 
   <!-- -->
   <section class="container-fluid bg-white">
