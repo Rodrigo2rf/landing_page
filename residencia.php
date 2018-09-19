@@ -39,7 +39,7 @@
                                 <div class="card-img background-img mb-2 mt-4" :style="{ backgroundImage: 'url(' + curso.img_capa_curso + ')' }"></div>
                                 <div class="card-body">
                                     <h6 class="color-green">{{ curso.fullname }}</h6>
-                                    <p class="card-text" v-html="curso.descricao"></p>
+                                    <!-- <p class="card-text" v-html="curso.descricao"></p> -->
                                 </div>
                             </div>
                             </a>
