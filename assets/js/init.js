@@ -24,8 +24,12 @@ new Vue({
                             this.imagensShowcase[i].href = 'http://eadh.liga.org.br/moodle/blocks/showcase/uploads/' + string;
                         }
                         if( type[1] === 'text' ){
-                            this.imagensShowcase[i].href = 'http://'+string;
-                        }
+				if( string.toLowerCase() === '/blocks/showcase/' ){
+					this.imagensShowcase[i].href = 0;
+				}else{
+				        this.imagensShowcase[i].href = 'http://'+string;
+				}
+			}
                     }else{ 
                         this.imagensShowcase[i].href = 0;
                     }
